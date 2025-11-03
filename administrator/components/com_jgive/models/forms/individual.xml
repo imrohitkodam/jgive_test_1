@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form class="form-validate">
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			filter="integer"/>
+
+		<field
+			name="first_name"
+			type="text"
+			required="true"
+			class="required no-whitespace"
+			label="COM_JGIVE_FIRST_NAME"
+			description="COM_JGIVE_FIRST_NAME_TOOLTIP"
+			hint="COM_JGIVE_INDIVIDUAL_FIRST_NAME_HINT"
+			filter="string"
+			maxlength="255"/>
+
+		<field
+			name="last_name"
+			type="text"
+			class="no-whitespace"
+			label="COM_JGIVE_LAST_NAME"
+			description="COM_JGIVE_LAST_NAME_TOOLTIP"
+			hint="COM_JGIVE_INDIVIDUAL_LAST_NAME_HINT"
+			filter="string"
+			maxlength="255"/>
+
+		<field
+			name="email"
+			type="email"
+			label="COM_JGIVE_INDIVIDUAL_EMAIL"
+			validate="email"
+			description="COM_JGIVE_INDIVIDUAL_EMAIL_TOOLTIP"
+			class="validate-email no-whitespace"
+			hint="COM_JGIVE_COMMON_EMAIL_HINT"
+			filter="string"
+			maxlength="255"/>
+
+		<field
+			name="phone"
+			type="text"
+			validate="tel"
+			label="COM_JGIVE_INDIVIDUAL_PHONE"
+			class="no-whitespace"
+			description="COM_JGIVE_INDIVIDUAL_PHONE_TOOLTIP"
+			hint="COM_JGIVE_COMMON_PHONE_HINT"
+			filter="string"
+			maxlength="20"/>
+
+		<field
+			name="taxnumber"
+			label="COM_JGIVE_PAYMENTFORM_TAXNUMBER"
+			description="COM_JGIVE_PAYMENTFORM_TAXNUMBER_TOOLTIP"
+			hint="COM_JGIVE_PAYMENTFORM_TAXNUMBER"
+			class="no-whitespace"
+			filter="string"
+			maxlength="50"/>
+
+		<field
+			name="create_user"
+			type="checkbox"
+			label="COM_JGIVE_INDIVIDUAL_CREATEUSER"
+			description="COM_JGIVE_INDIVIDUAL_CREATEUSER_TOOLTIP"
+			value="1"
+			filter="integer"/>
+
+		<field
+			name="user_id"
+			type="hidden"
+			filter="integer"/>
+
+		<field
+			name="addr_line_1"
+			type="textarea"
+			label="COM_JGIVE_INDIVIDUAL_ADDRESS1"
+			class="no-whitespace"
+			description="COM_JGIVE_INDIVIDUAL_ADDRESS1_TOOLTIP"
+			hint="COM_JGIVE_ADDRESS_HINT"
+			rows="3"
+			cols="50"
+			filter="string"/>
+
+		<field
+			name="addr_line_2"
+			type="textarea"
+			label="COM_JGIVE_INDIVIDUAL_ADDRESS2"
+			class="no-whitespace"
+			description="COM_JGIVE_INDIVIDUAL_ADDRESS2_TOOLTIP"
+			hint="COM_JGIVE_ADDRESS2_HINT"
+			rows="3"
+			cols="50"
+			filter="string"/>
+
+		<field
+			name="country"
+			type="list"
+			label="COM_JGIVE_COUNTRY"
+			description="COM_JGIVE_COUNTRY_TOOLTIP"
+			filter="integer"/>
+
+		<field
+			name="region"
+			type="list"
+			label="COM_JGIVE_REGION"
+			description="COM_JGIVE_STATE_TOOLTIP"
+			filter="integer">
+			<option value="">COM_JGIVE_CAMPAIGN_FORM_LIST_SELECT_OPTION</option>
+		</field>
+
+		<field
+			name="city"
+			type="list"
+			label="COM_JGIVE_CITY"
+			description="COM_JGIVE_CITY_TOOLTIP" filter="integer">
+			<option value="">COM_JGIVE_CAMPAIGN_FORM_LIST_SELECT_OPTION</option>
+		</field>
+
+		<field
+			name="other_city_check"
+			type="checkbox"
+			label="COM_JGIVE_OTHER_CITY"
+			description="COM_JGIVE_OTHER_CITY_CHECKBOX_TOOLTIP"
+			value="1"
+			filter="integer"/>
+
+		<field
+			name="other_city_value"
+			type="text"
+			label="COM_JGIVE_CITY_VALUE"
+			class="no-whitespace"
+			description="COM_JGIVE_OTHER_CITY_VALUE_TOOLTIP"
+			hint="COM_JGIVE_ENTER_OTHER_CITY_VALUE_HINT"
+			filter="string"/>
+
+		<field
+			name="zip"
+			label="COM_JGIVE_ZIP"
+			description="COM_JGIVE_ZIP_TOOLTIP"
+			hint="COM_JGIVE_COMMON_ZIP_HINT"
+			class="no-whitespace"
+			filter="string"
+			maxlength="30"/>
+		<field
+			name="published"
+			type="hidden"
+			filter="integer"/>
+		<field
+			name="created_date"
+			default="0000-00-00 00:00:00"
+			type="hidden"
+			filter="user_utc" />
+		<field
+			name="created_by"
+			type="hidden"
+			default="0"
+			filter="INT" />
+		<field
+			name="modified_date"
+			default="0000-00-00 00:00:00"
+			type="hidden"
+			filter="user_utc" />
+		<field
+			name="modified_by"
+			type="hidden"
+			default="0"
+			filter="INT" />
+		<field
+			name="vendor_id"
+			type="vendorslist"
+			required="true"
+			label="COM_JGIVE_FORM_LBL_INDIVIDUAL_VENDOR"
+			description="COM_JGIVE_FORM_DESC_INDIVIDUAL_VENDOR"
+			client="com_jgive"
+			multiple="false"
+			addfieldpath="/administrator/components/com_tjvendors/models/fields"
+		/>
+	</fieldset>
+</form>

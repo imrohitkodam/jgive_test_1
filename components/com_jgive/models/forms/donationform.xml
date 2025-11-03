@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="default">
+		<field
+			name="campaign_id"
+			type="text"
+			label="COM_JGIVE_CAMPAIGN_ID"
+			filter="integer"
+			required="true"
+		/>
+		<field
+			name="donation_amount"
+			type="text"
+			label="COM_JGIVE_CAMPAIGN_DONATION_AMOUNT"
+			required="true"
+		/>
+		<field
+			name="donorid"
+			type="text"
+			label="COM_JGIVE_CAMPAIGN_DONOR_ID"
+			filter="string"
+			required="true"
+		/>
+		<field
+			name="gateways"
+			type="text"
+			label="COM_JGIVE_CAMPAIGN_PAYMENT_GATEWAY"
+			filter="string"
+			required="true"
+		/>
+		<field
+			name="donation_status"
+			type="text"
+			label="COM_JGIVE_CAMPAIGN_DONATION_STATUS"
+			filter="string"
+			required="true"
+		/>
+	</fieldset>
+</form>

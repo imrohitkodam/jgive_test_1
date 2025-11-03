@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Campaigns">
+		<message>
+			<![CDATA[
+				Campaigns view
+			]]>
+		</message>
+		<options var="layout">
+			<option value="all" name="COM_JGIVE_TITLE_ALL_CAMPAIGN" msg="COM_JGIVE_TITLE_ALL_CAMPAIGN_DESC" />
+			<option value="my" name="COM_JGIVE_TITLE_MY_CAMPAIGN" msg="COM_JGIVE_TITLE_MY_CAMPAIGN_DESC" />
+		</options>
+	</view>
+	<!--
+	<state>
+		<name>Campaigns Layout</name>
+		<description>Layouts related to a campaigns</description>
+	</state>
+	-->
+</metadata>

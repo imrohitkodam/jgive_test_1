@@ -1,0 +1,1613 @@
+{
+ "template1": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "createCampaignMailToAdmin",
+    "title": "Create Campaign email to admin (Approval Off)",
+    "user_control": 1,
+    "state": 1,
+    "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "New campaign \"{{campaign.title}}\" is created successfully  on {{info.sitename}}",
+				"body": "<p>Dear {{info.adminname}},<br /><br />A new campaign : <strong>{{campaign.title}}</strong> was created by {{campaign.first_name}} on {{info.sitename}}. <a href='{{campaign.allcampaigns}}'>Click here</a> to view all campaigns on the site.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{info.adminname}}, A new campaign {{campaign.title}} created by {{campaign.first_name}} went live on site {{info.sitename}}."
+			}
+		}
+	},
+	"replacement_tags":[
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of campaign promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of campaign"
+	  },
+	  {
+		"name": "campaign.allcampaigns",
+		"description": "All campaigns view"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  }
+	]
+  },
+ "template2": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "createCampaignMailToPromoter",
+    "title": "Create campaign email to Campaign Owner (Approval OFF)",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your campaign \"{{campaign.title}}\" is created successfully  on {{info.sitename}}",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br />Your campaign - <strong>{{campaign.title}}</strong> has been created and {{campaign.status}} on {{info.sitename}}. <a href='{{campaign.mycampaigns}}'>Click here</a> to view all your campaigns.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, Your campaign {{campaign.title}} has been created with {{campaign.status}} status."
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of campaign promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of campaign"
+	  },
+	  {
+		"name": "campaign.mycampaigns",
+		"description": "Link to my campaigns"
+	  },
+	  {
+		"name": "campaign.status",
+		"description": "Campaign Publised or Unpublished"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+ "template3": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "createCampaignMailToAdminWaitingForApproval",
+    "title": "Create Campaign email to admin (Approval On)",
+    "user_control": 1,
+	"state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Campaign \"{{campaign.title}}\" created on {{info.sitename}} and waiting for approval",
+				"body": "<p>Dear {{info.adminname}},<br /><br />{{campaign.first_name}} has created a new campaign - <strong>{{campaign.title}}</strong> on {{info.sitename}}. It needs your <a href='{{campaign.allcampaignsBackend}}'>approval</a> before it is available to users.<br /><a href='{{campaign.allcampaigns}}'>Click here</a> to view all campaigns on the site.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{info.adminname}}, {{campaign.first_name}} has created a new campaign {{campaign.title}}. Visit admin panel to approve this campaign."
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.allcampaigns",
+		"description": "All campaigns view"
+	  },
+	  {
+		"name": "campaign.allcampaignsBackend",
+		"description": "All campaigns backend view"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  }
+	]
+  },
+ "template4": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "createCampaignMailToPromoterWaitingForApproval",
+    "title": "Create Campaign email to Campaign Owner (Approval On)",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your campaign \"{{campaign.title}}\" on {{info.sitename}} is pending for approval",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br />Your campaign - <strong>{{campaign.title}}</strong> has been created on {{info.sitename}} and waiting for admin approval.<br />You will receive another email once your campaign is approved.<br /><a href='{{campaign.mycampaigns}}'>Click here</a> to view all your campaigns.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, Your campaign {{campaign.title}} has been created and it is waiting for admin's approval."
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.mycampaigns",
+		"description": "Link to my campaigns"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+ "template5": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "approvalOnCampaignMailToPromoter",
+    "title": "Approve Campaign Email to Campaign Owner (Approval On)",
+    "user_control": 1,
+    "state": 1,
+    "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your campaign \"{{campaign.title}}\" on {{info.sitename}} has been approved",
+				"body": "<p>Dear {{campaign.name}},<br /><br />Your campaign - <strong>{{campaign.title}}</strong> has been approved by admin on {{info.sitename}}.<br /><a href='{{campaign.mycampaigns}}'>Click here</a> to view all your campaigns.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.name}},Your campaign {{campaign.title}} has been approved by admin on {{info.sitename}}."
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.mycampaigns",
+		"description": "Link to my campaigns"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+ "template6": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "editCampaignMailToAdmin",
+    "title": "Edit Campaign mail to admin",
+    "user_control": 1,
+    "state": 1,
+    "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Campaign \"{{campaign.title}}\" on {{info.sitename}} has been edited",
+				"body": "<p>Dear {{info.adminname}},<br /><br />{{editor.name}} has edited the campaign - <strong>{{campaign.title}}</strong> on {{info.sitename}}<br /><br />Here are the campaign details:<br /><strong>Campaign name</strong>: <a href='{{campaign.campaignDetailed}}'>{{campaign.title}}</a><br /><strong>Category</strong>: {{category.title}}<br /><strong>Goal amount</strong>: {{campaign.goal_amount}}<br /><br />Campaign promoter:<br /><strong>Promoter name</strong>: {{campaign.first_name}}<br /><strong>Promoter Id</strong>: {{editor.id}}<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi, {{info.adminname}},{{editor.name}} has made changes to the campaign titled {{campaign.title}} Please check changes here - {{campaign.campaignDetailed}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.title",
+		"description": "Name of campaign"
+	  },
+	  {
+		"name": "category.title",
+		"description": "Category of campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal amount of campaign"
+	  },
+	  {
+		"name": "campaign.campaignDetailed",
+		"description": "Link to campaigns details view"
+	  },
+	  {
+		"name": "editor.name",
+		"description": "One who edits campaign"
+	  },
+	  {
+		"name": "editor.id",
+		"description": "Id of campaign promoter"
+	  },
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of campaign promoter"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.siteadmin",
+		"description": "Siteadmin"
+	  }
+	]
+  },
+ "template7": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "editCampaignMailToPromoter",
+    "title": "Edit Campaign mail to campaign owner",
+    "user_control": 1,
+    "state": 1,
+    "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Campaign \"{{campaign.title}}\" on {{info.sitename}} has been edited successfully",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br />Your campaign - <strong>{{campaign.title}}</strong> has been edited on {{info.sitename}}.<br /><br />Here are the campaign details:<br /><strong>Campaign name</strong>: <a href='{{campaign.campaignDetailed}}'>{{campaign.title}}</a><br /><strong>Category</strong>: {{category.title}}<br /><strong>Goal amount</strong>: {{campaign.goal_amount}}<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, your campaign {{campaign.title}} has been changed. Please check changes here - {{campaign.campaignDetailed}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "category.title",
+		"description": "Category of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.campaignDetailed",
+		"description": "Link to Campaigns Detailed page"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+ "template8": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "reachGoalAmountForCampaignMailToPromoter",
+    "title": "Goal amount reached for a campaign",
+    "user_control": 1,
+    "state": 1,
+    "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Congrats! Your campaign : {{campaign.title}} on {{info.sitename}} just reached its goal!",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br />Campaign: <strong>{{campaign.title}}</strong> on {{info.sitename}} has reached its goal amount.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, Congratulations!!! Your {{campaign.title}} campaign has reached its goal amount."
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+ "template9": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paidDonationMailToPromoter",
+    "title": "Donation paid mail to Campaign Owner (Donation Type Campaign)",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "New Donation {{order.order_id}} on {{info.sitename}}",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br />You have received a donation on {{info.sitename}}, you will receive another email once the donation payment status changes.<br /><br />Donation details are as follows.<br /><br /><strong>Payment details</strong><br />Donation Id: {{payment.order_id}}<br />Date: {{payment.cdate}}<br />Donation type: {{payment.donationType}}<br />Amount: {{payment.amount}}<br />IP address: {{payment.ip_address}}<br />Payment method: {{payment.processor}}<br />Anonymous donation: {{payment.anonymous}}<br /><br /><strong>Payment status</strong><br />Payment status: {{payment.donationStatus}}<br /><br /><strong>Donor details</strong><br />Name: {{donor.first_name}}<br />Email address: {{donor.email}}<br /><br /><strong>Campaign details</strong><br />Title: {{campaign.title}}<br />Goal:{{campaign.goal_amount}}<br />Amount received: {{campaign.amount_received}}<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, New donation {{payment.order_id}} received from {{donor.first_name}} and the donation amount is {{payment.amount}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "promoter.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "promoter.email",
+		"description": "Campaign Promoter email"
+	  },
+	  {
+		"name": "payment.order_id",
+		"description": "Donation Id"
+	  },
+	  {
+		"name": "payment.giveback_id",
+		"description": "Giveback Id"
+	  },
+	  {
+		"name": "payment.giveback_title",
+		"description": "Giveback title"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign Start Date"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "payment.amount",
+		"description": "Total amount of Campaign"
+	  },
+	  {
+		"name": "payment.ip_address",
+		"description": "IP Address"
+	  },
+	  {
+		"name": "payment.processor",
+		"description": "Donation Payment Mode"
+	  },
+	  {
+		"name": "payment.anonymous",
+		"description": "Find if anonymous"
+	  },
+	  {
+		"name": "payment.donationStatus",
+		"description": "Donation Status"
+	  },
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "donor.email",
+		"description": "Email of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.amount_received",
+		"description": "Amount received by Campaign"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  },
+	  {
+		"name": "payment.donationType",
+		"description": "Donation Type"
+	  }
+	]
+  },
+ "template10": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paidInvestmentMailToPromoter",
+    "title": "Investment paid mail to Campaign Owner (Investment Type Campaign)",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "New Investment {{order.order_id}} on {{info.sitename}}",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br />You have received an investment on {{info.sitename}}, you will receive a different email once the investment payment status changes.<br /><br />Investment details are as follows.<br /><br /><strong>Payment details</strong><br />Investment Id: {{payment.order_id}}<br />Date: {{payment.cdate}}<br />Investment type: {{payment.donationType}}<br />Amount: {{payment.amount}}<br />IP address: {{payment.ip_address}}<br />Payment method: {{payment.processor}}<br /><br /><strong>Payment status</strong><br />Payment status: {{payment.donationStatus}}<br /><br /><strong>Investor details</strong><br />Name: {{donor.first_name}}<br />Email address: {{donor.email}}<br /><br /><strong>Campaign details</strong><br />Title: {{campaign.title}}<br />Goal:{{campaign.goal_amount}}<br />Amount received: {{campaign.amount_received}}<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, New investment {{payment.order_id}} received from {{donor.first_name}}, and the donation amount is {{payment.amount}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "promoter.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "promoter.email",
+		"description": "Campaign Promoter email"
+	  },
+	  {
+		"name": "payment.order_id",
+		"description": "Investment Id"
+	  },
+	  {
+		"name": "payment.giveback_id",
+		"description": "Giveback Id"
+	  },
+	  {
+		"name": "payment.giveback_title",
+		"description": "Giveback title"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign Start Date"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "payment.amount",
+		"description": "Total amount of Campaign"
+	  },
+	  {
+		"name": "payment.ip_address",
+		"description": "IP Address"
+	  },
+	  {
+		"name": "payment.processor",
+		"description": "Investment Payment Mode"
+	  },
+	  {
+		"name": "payment.donationStatus",
+		"description": "Investment Status"
+	  },
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "donor.email",
+		"description": "Email of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.amount_received",
+		"description": "Amount received by Campaign"
+	  },
+	  {
+		"name": "campaign.remaining_amount",
+		"description": "Amount remaining to reach goal amount of a Campaign"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  },
+	  {
+		"name": "payment.donationType",
+		"description": "Investment Type"
+	  }
+	]
+  },
+ "template11": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paidDonationMailToDonor",
+    "title": "Donation paid mail to Donor (Donation Type Campaign)",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your Donation {{order.order_id}} on {{info.sitename}} is being processed",
+				"body": "<p>Dear {{donor.first_name}},<br /><br />You have made a donation on {{info.sitename}}, you will receive a another email once the donation payment status changes.<br /><br />Donation details are as follows.<br /><br /><strong>Payment details</strong><br />Donation Id: {{payment.order_id}}<br />Date: {{payment.cdate}}<br />Donation type: {{payment.donationType}}<br />Amount: {{payment.amount}}<br />IP address: {{payment.ip_address}}<br />Payment method: {{payment.processor}}<br />Anonymous donation: {{payment.anonymous}}<br /><br /><strong>Payment status</strong><br />Payment status: {{payment.donationStatus}}<br /><br /><strong>Donor details</strong><br />Name: {{donor.first_name}}<br />Email address: {{donor.email}}<br /><br /><strong>Campaign details</strong><br />Title: {{campaign.title}}<br />Goal:{{campaign.goal_amount}}<br />Amount received: {{campaign.amount_received}}<br /><br /><a href='{{payment.mydonations}}'>Click here</a> to view your donations.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{donor.first_name}}, Thank you for the donation.Your donation order id  is  {{payment.order_id}} and status is {{payment.donationStatus}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "promoter.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "promoter.email",
+		"description": "Campaign Promoter email"
+	  },
+	  {
+		"name": "payment.order_id",
+		"description": "Donation Id"
+	  },
+	  {
+		"name": "payment.giveback_id",
+		"description": "Giveback Id"
+	  },
+	  {
+		"name": "payment.giveback_title",
+		"description": "Giveback title"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign Start Date"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "payment.amount",
+		"description": "Total amount of Campaign"
+	  },
+	  {
+		"name": "payment.ip_address",
+		"description": "IP Address"
+	  },
+	  {
+		"name": "payment.processor",
+		"description": "Donation Payment Mode"
+	  },
+	  {
+		"name": "payment.anonymous",
+		"description": "Find if anonymous"
+	  },
+	  {
+		"name": "payment.donationStatus",
+		"description": "Donation Status"
+	  },
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "donor.email",
+		"description": "Email of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.amount_received",
+		"description": "Amount received by Campaign"
+	  },
+	  {
+		"name": "payment.mydonations",
+		"description": "Link to see donation"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  },
+	  {
+		"name": "payment.donationType",
+		"description": "Donation Type"
+	  }
+	]
+  },
+  "template12": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paidInvestmentMailToDonor",
+    "title": "Investment paid mail to Donor (Investment Type Campaign)",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your Investment {{order.order_id}} on {{info.sitename}} is being processed",
+				"body": "<p>Dear {{donor.first_name}},<br /><br />You have made an investment on {{info.sitename}}, you will receive a different email once the Investment payment status changes.<br />Investment details are as follows.<br /><br /><strong>Payment details</strong><br />Investment Id: {{payment.order_id}}<br />Date: {{payment.cdate}}<br />Investment type: {{payment.donationType}}<br />Amount: {{payment.amount}}<br />IP address: {{payment.ip_address}}<br />Payment method: {{payment.processor}}<br /><br /><strong>Payment status</strong><br />Payment status: {{payment.donationStatus}}<br /><br /><strong>Investor details</strong><br />Name: {{donor.first_name}}<br />Email address: {{donor.email}}<br /><br /><strong>Campaign details</strong><br />Title: {{campaign.title}}<br />Goal:{{campaign.goal_amount}}<br />Amount received: {{campaign.amount_received}}<br /><br /><a href='{{payment.mydonations}}'>Click here</a> to view your investments.<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{donor.first_name}}, Thank you for investment. Your investment order id is {{payment.order_id}} and status is  {{payment.donationStatus}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "promoter.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "promoter.email",
+		"description": "Campaign Promoter email"
+	  },
+	  {
+		"name": "payment.order_id",
+		"description": "Investment Id"
+	  },
+	  {
+		"name": "payment.giveback_id",
+		"description": "Giveback Id"
+	  },
+	  {
+		"name": "payment.giveback_title",
+		"description": "Giveback title"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign Start Date"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "payment.amount",
+		"description": "Total amount of Campaign"
+	  },
+	  {
+		"name": "payment.ip_address",
+		"description": "IP Address"
+	  },
+	  {
+		"name": "payment.processor",
+		"description": "Investment Payment Mode"
+	  },
+	  {
+		"name": "payment.donationStatus",
+		"description": "Investment Status"
+	  },
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "donor.email",
+		"description": "Email of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.amount_received",
+		"description": "Amount received by Campaign"
+	  },
+	  {
+		"name": "payment.mydonations",
+		"description": "Link to see Investments"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  },
+	  {
+		"name": "payment.donationType",
+		"description": "Investment Type"
+	  }
+	]
+  },
+  "template13": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paidDonationMailToAdmin",
+    "title": "Donation paid mail to Admin (Donation Type Campaign)",
+    "user_control": 1,
+	"state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Update for \"Donation {{order.order_id}}\" on \"{{info.sitename}}\"",
+				"body": "<p>Dear {{info.adminname}},<br /><br />Donation has been done on {{info.sitename}}, you will receive an another email once the donation payment status changes.<br />Donation details are as follows.<br /><br /><strong>Payment details</strong><br />Donation Id: {{payment.order_id}}<br />Date: {{payment.cdate}}<br />Donation type: {{payment.donationType}}<br />Amount: {{payment.amount}}<br />IP address: {{payment.ip_address}}<br />Payment method: {{payment.processor}}<br />Anonymous donation: {{payment.anonymous}}<br /><br /><strong>Payment status</strong><br />Payment status: {{payment.donationStatus}}<br /><br /><strong>Donor details</strong><br />Name: {{donor.first_name}}<br />Email address: {{donor.email}}<br /><br /><strong>Campaign details</strong><br />Title: {{campaign.title}}<br />Goal:{{campaign.goal_amount}}<br />Amount received: {{campaign.amount_received}}<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{info.adminname}}, New donation {{payment.order_id}} has been done by  {{donor.first_name}}, donation amount is {{payment.amount}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "promoter.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "promoter.email",
+		"description": "Campaign Promoter email"
+	  },
+	  {
+		"name": "payment.order_id",
+		"description": "Donation Id"
+	  },
+	  {
+		"name": "payment.giveback_id",
+		"description": "Giveback Id"
+	  },
+	  {
+		"name": "payment.giveback_title",
+		"description": "Giveback title"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign Start Date"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "payment.amount",
+		"description": "Total amount of Campaign"
+	  },
+	  {
+		"name": "payment.ip_address",
+		"description": "IP Address"
+	  },
+	  {
+		"name": "payment.processor",
+		"description": "Donation Payment Mode"
+	  },
+	  {
+		"name": "payment.anonymous",
+		"description": "Find if anonymous"
+	  },
+	  {
+		"name": "payment.donationStatus",
+		"description": "Donation Status"
+	  },
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "donor.email",
+		"description": "Email of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.amount_received",
+		"description": "Amount received by Campaign"
+	  },
+	  {
+		"name": "payment.mydonations",
+		"description": "Link to see donation"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  },
+	  {
+		"name": "payment.donationType",
+		"description": "Donation Type"
+	  }
+	]
+  },
+  "template14": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paidInvestementMailToAdmin",
+    "title": "Investment paid mail to Admin (Investment Type Campaign)",
+    "user_control": 1,
+	"state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "{{info.sitename}} Investment - {{order.order_id}}",
+				"body": "<p>Dear {{info.adminname}},<br /><br />Investment has been made on {{info.sitename}}, you will receive a different email once the investment payment status changes.<br /><br />Investment details are as follows.<br /><br /><strong>Payment details</strong><br />Investment Id: {{payment.order_id}}<br />Date: {{payment.cdate}}<br />Investment type: {{payment.donationType}}<br />Amount: {{payment.amount}}<br />IP address: {{payment.ip_address}}<br />Payment method: {{payment.processor}}<br /><br /><strong>Payment status</strong><br />Payment status: {{payment.donationStatus}}<br /><br /><strong>Investor details</strong><br />Name: {{donor.first_name}}<br />Email address: {{donor.email}}<br /><br /><strong>Campaign details</strong><br />Title: {{campaign.title}}<br />Goal:{{campaign.goal_amount}}<br />Amount received: {{campaign.amount_received}}<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{info.adminname}}, New investment {{payment.order_id}} has been made by {{donor.first_name}}, investment amount is {{payment.amount}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "promoter.name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "promoter.email",
+		"description": "Campaign Promoter email"
+	  },
+	  {
+		"name": "payment.order_id",
+		"description": "Investment Id"
+	  },
+	  {
+		"name": "payment.giveback_id",
+		"description": "Giveback Id"
+	  },
+	  {
+		"name": "payment.giveback_title",
+		"description": "Giveback title"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign Start Date"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "payment.amount",
+		"description": "Total amount of Campaign"
+	  },
+	  {
+		"name": "payment.ip_address",
+		"description": "IP Address"
+	  },
+	  {
+		"name": "payment.processor",
+		"description": "Investment Payment Mode"
+	  },
+	  {
+		"name": "payment.donationStatus",
+		"description": "Investment Status"
+	  },
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "donor.email",
+		"description": "Email of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.goal_amount",
+		"description": "Goal Amount of Campaign"
+	  },
+	  {
+		"name": "campaign.amount_received",
+		"description": "Amount received by Campaign"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  },
+	  {
+		"name": "payment.donationType",
+		"description": "Investment Type"
+	  }
+	]
+  },
+  "template15": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "orderStatusChangeMailToDonor",
+    "title": "Donation/Investment Status Change Mail to Donor",
+    "user_control": 1,
+	"state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Payment status has changed for {{campaign.type}} {{order.order_id}}",
+				"body": "<p>Dear {{donor.first_name}},<br /><br /><br />The status of {{campaign.type}} id <strong>{{order.order_id}}</strong> on <strong>{{info.sitename}}</strong> has changed.<br />---------------------------------------------------------------------------------------------------------<br />The new status is <strong>{{order.order_status}}</strong><br />---------------------------------------------------------------------------------------------------------<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{donor.first_name}}, {{order.order_id}} order of {{campaign.title}} campaign status has changed. New status of order is {{order.order_status}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "donor.first_name",
+		"description": "Name of Donor"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "order.order_id",
+		"description": "Donation / Investment order id"
+	  },
+	  {
+		"name": "order.order_status",
+		"description": "Donation / Investment order status"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+  "template16": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "orderStatusChangeMailToCampaignOwner",
+    "title": "Donation/Investment Status Change Mail to Campaign Owner",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Payment status has changed for {{campaign.type}} {{order.order_id}}",
+				"body": "<p>Dear {{campaign.first_name}},<br /><br /><br />The status of {{campaign.type}} id <strong>{{order.order_id}}</strong> on <strong>{{info.sitename}}</strong> has changed.<br />---------------------------------------------------------------------------------------------------------<br />The new status is <strong>{{order.order_status}}</strong><br />---------------------------------------------------------------------------------------------------------<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{campaign.first_name}}, {{order.order_id}} order of {{campaign.title}} campaign status has changed. New order status is {{order.order_status}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.first_name",
+		"description": "Name of Campaign Promoter"
+	  },
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "order.order_id",
+		"description": "Donation / Investment order id"
+	  },
+	  {
+		"name": "order.order_status",
+		"description": "Donation / Investment order status"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+  "template17": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "orderStatusChangeMailToAdmin",
+    "title": "Donation/Investment Status Change Mail to Admin",
+    "user_control": 1,
+	"state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Payment status has changed for {{campaign.type}} {{order.order_id}}",
+				"body": "<p>Dear {{info.adminname}},<br /><br />The status of {{campaign.type}} id <strong>{{order.order_id}}</strong> on <strong>{{info.sitename}}</strong> has changed.<br />---------------------------------------------------------------------------------------------------------<br />The new status is <strong>{{order.order_status}}</strong><br />---------------------------------------------------------------------------------------------------------<br /><br />This is system generated email, please do not reply.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi {{info.adminname}}, {{order.order_id}} order status has changed. New status is {{order.order_status}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "campaign.title",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "campaign.type",
+		"description": "Type of Campaign"
+	  },
+	  {
+		"name": "order.order_id",
+		"description": "Donation / Investment order id"
+	  },
+	  {
+		"name": "order.order_status",
+		"description": "Donation / Investment order status"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  },
+	  {
+		"name": "info.adminname",
+		"description": "Siteadmin"
+	  }
+	]
+  },
+ "template18": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paymentRecieptMailToCampaignOwner",
+    "title": "Donation Receipt Mail to Campiagn Owner",
+    "user_control": 1,
+	"state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Donation Receipt for campaign \"{{campaign.campaigntitle}}\" on {{info.sitename}}",
+				"body": "<table width='100%'><tbody><tr><td align='center'><h2><strong>Donation Receipt</strong></h2></td></tr><tr><td><p style='text-align: right;'><strong>Receipt No</strong>. : {{payment.order_id}}<br /><strong>Date</strong>: {{payment.cdate}}</p></td></tr><tr><td><hr /><p>A donation in the amount of : <strong> {{order.amount}}</strong> has been made to <strong>{{campaign.campaigntitle}}</strong></p></td></tr><tr><td style='text-align: left;' colspan='2'><p><span style='font-family: verdana;'><span style='font-size: 16px;'><strong>Donor</strong>: {{order.donor_first_name}}</span></span></p></td></tr><tr><td colspan='2' align='center'><p><strong><span style='font-size: 18px; font-family: verdana;'>Thank you for your generous support!</span></strong></p></td></tr></tbody></table><p><span style='color: #000000; font-family: Arial; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>This is system generated email, please do not reply. Many thanks from <strong>{{info.sitename}}</strong></span></p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "A donation {{payment.order_id}} in the amount of {{order.amount}} has been made by {{order.donor_first_name}} to {{campaign.campaigntitle}} on {{payment.cdate}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "payment.order_id",
+		"description": "ID of Donation / Investment Order"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign start date"
+	  },
+	  {
+		"name": "order.amount",
+		"description": "Amount donated / invested"
+	  },
+	  {
+		"name": "campaign.campaigntitle",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "order.donor_first_name",
+		"description": "Donors First name"
+	  },
+	  {
+		"name": "order.donor_last_name",
+		"description": "Donors Last name"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+  },
+ "template19": {
+    "id": "",
+    "client": "com_jgive",
+    "key": "paymentRecieptMailToDonor",
+    "title": "Donation Receipt Mail to Donor",
+    "user_control": 1,
+    "state": 1,
+	"core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Donation Receipt for campaign \"{{campaign.campaigntitle}}\" on {{info.sitename}}",
+				"body": "<table width='100%'><tbody><tr><td align='center'><h2><strong>Donation Receipt</strong></h2></td></tr><tr><td><p style='text-align: right;'><strong>Receipt No</strong>. : {{payment.order_id}}<br /><strong>Date</strong>: {{payment.cdate}}</p></td></tr><tr><td><hr /><p>A donation in the amount of : <strong> {{order.amount}}</strong> has been made to <strong>{{campaign.campaigntitle}}</strong></p></td></tr><tr><td style='text-align: left;' colspan='2'><p><span style='font-family: verdana;'><span style='font-size: 16px;'><strong>Donor</strong>: {{order.donor_first_name}}</span></span></p></td></tr><tr><td colspan='2' align='center'><p><strong><span style='font-size: 18px; font-family: verdana;'>Thank you for your generous support!</span></strong></p></td></tr></tbody></table><p><span style='color: #000000; font-family: Arial; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: pre-wrap; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>This is system generated email, please do not reply. Many thanks from <strong>{{info.sitename}}</strong></span></p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 0,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "A donation {{payment.order_id}} in the amount of {{order.amount}} has been made by {{order.donor_first_name}} to {{campaign.campaigntitle}} on {{payment.cdate}}"
+			}
+		}
+	},
+	"replacement_tags": [
+	  {
+		"name": "payment.order_id",
+		"description": "ID of Donation / Investment Order"
+	  },
+	  {
+		"name": "payment.cdate",
+		"description": "Campaign start date"
+	  },
+	  {
+		"name": "order.amount",
+		"description": "Amount donated / invested"
+	  },
+	  {
+		"name": "campaign.campaigntitle",
+		"description": "Name of Campaign"
+	  },
+	  {
+		"name": "order.donor_first_name",
+		"description": "Donors First name"
+	  },
+	  {
+		"name": "order.donor_last_name",
+		"description": "Donors Last name"
+	  },
+	  {
+		"name": "info.sitename",
+		"description": "Sitename"
+	  }
+	]
+},
+"template20": {
+"id": "",
+"client": "com_jgive",
+"key": "newCampaignMailToDonor",
+"title": "New Campaign Notification to Donor",
+"user_control": 1,
+"state": 1,
+"core": 1,
+"email": {
+  "state": 1,
+  "cc": "",
+  "bcc": "",
+  "from_name": "",
+  "from_email": "",
+  "emailfields": {
+	"emailfields0": {
+	  "id": "",
+	  "language": "*",
+	  "subject": "A Fresh Chapter Begins – Let’s Make It Count",
+	  "body": "<p>Dear {{donor.name}},<br /><br /> We are pleased to announce the launch of a new donation campaign: <strong>{{campaign.name}}</strong>.<br /><br /> You can view the campaign here: <a href=\"{{campaign.link}}\">Click here to view the campaign</a><br /><br /> Your generous and continued support plays a critical role in the success of our efforts, and together, we can make an even greater impact on those who need it most.<br /><br /> We sincerely appreciate your commitment to our cause and are grateful to have you as an essential part of our mission.<br /><br /> Thank you once again for your unwavering support. <br /><br /> Warm regards,<br /> Team JGive </p>"
+	}
+  }
+},
+"sms": {
+  "state": 0,
+  "smsfields": {
+	"smsfields0": {
+	  "id": "",
+	  "language": "*",
+	  "body": "Hi {{donor.name}}, a new campaign '{{campaign.name}}' has been launched!"
+	}
+  }
+},
+"replacement_tags": [
+  {
+	"name": "campaign.name",
+	"description": "Name of Campaign"
+  },
+  {
+	"name": "donor.name",
+	"description": "Name of Donor"
+  }
+]
+  },
+  	"template21": {
+		"id": "",
+		"client": "com_jgive",
+		"key": "donationAmoutLargerThanThreshold",
+		"title": "User want to donate amount greater than threshold",
+		"user_control": 1,
+		"state": 1,
+		"core": 1,
+		"email":{
+			"state": 1,
+			"cc": "",
+			"bcc": "",
+			"from_name": "",
+			"from_email": "",
+			"emailfields": {
+				"emailfields0": {
+					"id": "",
+					"language": "*",
+					"subject": "User Donation Amount Exceeds Threshold",
+					"body": "Dear {{user.adminname}},<br><br>We have observed that a user intends to make a donation exceeding the set threshold. Could you please advise on how you would like to proceed with this request?<br><br>Additionally, kindly check the availability for connecting with the specified user at the time provided and update us accordingly.<br><br>User Details:<br><br>Email: {{user.email}}<br><br>Phone: {{user.phone}}<br><br>Preferred Time for Contact: {{user.time}}<br><br><br>"
+				}
+			}
+		},
+		"sms": {
+			"state": 0,
+			"smsfields": {
+				"smsfields0": {
+					"id": "",
+					"language": "*",
+					"body": "User Donation Amount Exceeds Threshold"
+				}
+			}
+		},
+		"replacement_tags": [
+			{
+			"name": "user.adminname",
+			"description": "Name of the site owner set in global configuration"
+			},
+			{
+			"name": "user.email",
+			"description": "Email of the user"
+			},
+			{
+			"name": "user.phone",
+			"description": "Phone number of the user"
+			},
+			{
+			"name": "user.time",
+			"description": "Available on time of the user for further communication"
+			}
+		]
+	},
+
+	"template22": {
+	 "id": "",
+	 "client": "com_jgive",
+	 "key": "vendorReportMail",
+	 "title": "Donation Report to Vendor",
+	 "user_control": 1,
+	 "state": 1,
+	 "core": 1,
+	 "email": {
+	   "state": 1,
+	   "cc": "",
+	   "bcc": "",
+	   "from_name": "",
+	   "from_email": "",
+	   "emailfields": {
+		 "emailfields0": {
+		   "id": "",
+		   "language": "*",
+		   "subject": "Donation Report",
+		   "body": "<p>Dear Vendor,</p><p>Please find the attached your {{attach.period}} donation report. Data consist from period from <b>{{attach.fromDate}}</b> to <b>{{attach.toDate}}</b>.<br>Please find the report available for download by clicking the link below:</p><p><a href='{{attach.pdfLink}}'>Download your report</a></p><p>Thank you for your continued support.</p><p>Best regards,<br><strong></strong></p><hr><p><small>This is an automated email. Please do not reply.<br>Please Download and save the pdf file for future use.</small></p>",
+		   "attachment": "link"
+		 }
+	   }
+	 },
+	 "sms": {
+	   "state": 0,
+	   "smsfields": {
+		 "smsfields0": {
+		   "id": "",
+		   "language": "*",
+		   "body": "Hi {{vendor.name}}, your donation report is ready. Download it from the link provided."
+		 }
+	   }
+	 },
+	 "replacement_tags": [
+	   {
+		 "name": "attach.pdfLink",
+		 "description": "Link to the PDF donation report"
+	   },
+	   {
+		 "name": "attach.period",
+		 "description": "period like monthly, quartly or yearly"
+	   },
+	   {
+		 "name": "attach.fromDate",
+		 "description": "report generated from date"
+	   },
+	   {
+		 "name": "attach.toDate",
+		 "description": "report generated till date"
+	   }
+
+	 ]
+   }
+}

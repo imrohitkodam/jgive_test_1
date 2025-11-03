@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JGIVE_TITLE_CREATE_NEW_CAMPAIGN">
+		<message>
+			<![CDATA[COM_JGIVE_TITLE_CREATE_NEW_CAMPAIGN_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JGIVE_CREATE_NEW_CAMPAIGN</name>
+		<description>COM_JGIVE_CREATE_NEW_CAMPAIGN_DESC</description>
+		<params>
+		</params>
+	</state>
+</metadata>

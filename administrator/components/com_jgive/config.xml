@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<!-- General setting  -->
+	<fieldset name="general_settings" label="COM_JGIVE_GENERAL_SETTINGS" description="" addfieldpath="/media/com_jgive/fields" >
+
+		<field menu="hide" type="legend" id="jgive-integrations-settings" name="jgive-integrations-settings" label="" default="COM_JGIVE_INTEGRATION_SETTINGS" hint="" />
+
+		<!--Added by deepa-->
+		<field name="integration" class="inputbox btn-group" type="integrations" label="COM_JGIVE_INTERATION" default="joomla" description="COM_JGIVE_INTERATION_DESC" />
+
+		<field name="gravatar" class="btn-group" type="radio" default="0" label="COM_JGIVE_GRAVATAR_INT_CONF" description="COM_JGIVE_GRAVATAR_INT_CONF_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="jomsocial_toolbar" class="btn-group" type="radio" default="0" showon="integration:jomsocial" label="COM_JGIVE_JS_TOOLBAR" description="COM_JGIVE_JS_TOOLBAR_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="profile_complete" class="btn-group" type="radio" default="0" label="COM_JGIVE_PROFILE_COMPLETE" description="COM_JGIVE_PROFILE_COMPLETE_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="profile_import" class="btn-group" type= "radio" default="0" label="COM_JGIVE_PROFILE_IMPORT" description="COM_JGIVE_PROFILE_IMPORT_DESC">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="fieldmap" type="fieldmapping" label="COM_JGIVE_JOOMLA_PROFILE_MAPPING" description="COM_JGIVE_JOOMLA_PROFILE_MAPPING_DESC" cols="35" rows="5"/>
+
+		<field name="jomsocial_fieldmap" type="jomsocialfieldmapping" label="COM_JGIVE_JOMSOCIAL_PROFILE_MAPPING" description="COM_JGIVE_JOMSOCIAL_PROFILE_MAPPING_DESC" cols="35" rows="5"/>
+
+		<field name="cb_fieldmap" type="cbfieldmapping" label="COM_JGIVE_CB_PROFILE_MAPPING" description="COM_JGIVE_CB_PROFILE_MAPPING_DESC" cols="35" rows="5"/>
+
+		<field name="easysocial_fieldmap" type="easysocialfieldmapping" label="COM_JGIVE_EASYSOCIAL_PROFILE_MAPPING" description="COM_JGIVE_EASYSOCIAL_PROFILE_MAPPING_DESC" cols="35" rows="5"/>
+
+		<field name="ep_fieldmap" type="easyprofilefieldmapping" label="COM_JGIVE_EASY_PROFILE_MAPPING" description="COM_JGIVE_EASY_PROFILE_MAPPING_DESC" cols="35" rows="5"/>
+
+		<field menu="hide" type="legend" id="jgive-campaign-creation" name="jgive-campaign-creation" label="" default="COM_JGIVE_CAMPAIGN_CREATION_SETS" hint="" />
+
+		<field name="default_country" type="countries" default="" label="COM_JGIVE_SELECT_DEFAULT_COUNTRY" description="COM_JGIVE_SELECT_DEFAULT_COUNTRY_DES" />
+
+		<field name="camp_type" type="list" default="donation" multiple="multiple" label="COM_JGIVE_CAMPAIGN_TYPE_ALLOWED_CREATION" description="COM_JGIVE_CAMPAIGN_TYPE_ALLOWED_CREATION_DESC">
+			<option value="donation">COM_JGIVE_CAMPAIGN_TYPE_DONATION</option>
+			<option value="investment">COM_JGIVE_CAMPAIGN_TYPE_INVESTMENT</option>
+		</field>
+
+		<field name="silent_vendor" class="btn-group" type="createsilentvendor" default="1" label="COM_JGIVE_CREATE_SILENT_VENDOR" description="COM_JGIVE_CREATE_SILENT_VENDOR_DESC" >
+		</field>
+
+		<field name="admin_approval" class="btn-group" type="radio" default="0" label="COM_JGIVE_ADMIN_APPROVAL" description="COM_JGIVE_ADMIN_APPROVAL_DES" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="show_selected_fields" class="btn-group" type="radio" default="0" label="COM_JGIVE_SHOW_ALL_FIELDS" description="COM_JGIVE_SHOW_ALL_FIELDS_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="creatorfield" type="list" default="" multiple="multiple" label="COM_JGIVE_SELECT_FIELD_TO_SHOW_CREATE_CAMP" description="COM_JGIVE_SELECT_FIELD_TO_SHOW_CREATE_CAMP_DESC" showon="show_selected_fields:1">
+			<option value="max_donation">COM_JGIVE_MAX_DONATION_INVEST</option>
+			<option value="min_donation">COM_JGIVE_MIN_DONATION_INVEST</option>
+			<option value="long_desc">COM_JGIVE_LONG_DESC_CONFIG</option>
+			<option value="allow_exceed">COM_JGIVE_ALLOW_EXCEED_CONFIG</option>
+			<option value="show_public">COM_JGIVE_SHOW_PUB_CONFIG</option>
+			<option value="group_name">COM_JGIVE_GROUP_CONFIG</option>
+			<option value="give_back">COM_JGIVE_GIVE_BACK_CONFIG</option>
+			<option value="beneficiary_stories">COM_JGIVE_BENEFICIARY_STORY_CONFIG</option>
+			<option value="js_group">COM_JGIVE_JS_GROUP_CONFIG</option>
+			<option value="campaign_type">COM_JGIVE_CAMPAIGN_TYPE_CONFIG</option>
+		</field>
+
+		<!--Added by Sneha-->
+		<field name="show_selected_fields_on_donation" class="btn-group" type="radio" default="0" label="COM_JGIVE_SHOW_ALL_DONATIONS_FIELDS" description="COM_JGIVE_SHOW_ALL_DONATIONS_FIELDS_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		<field name="donationfield" type="list" default="" multiple="multiple" label="COM_JGIVE_SELECT_FIELD_TO_SHOW_ON_DONATION" description="COM_JGIVE_SELECT_FIELD_TO_SHOW_ON_DONATION_DESC" showon="show_selected_fields_on_donation:1">
+			<option value="first_name">COM_JGIVE_FIRST_NAME</option>
+			<option value="last_name">COM_JGIVE_LAST_NAME</option>
+			<option value="address">COM_JGIVE_ADDRESS</option>
+			<option value="address2">COM_JGIVE_ADDRESS2</option>
+			<option value="country">COM_JGIVE_COUNTRY</option>
+			<option value="state">COM_JGIVE_STATE</option>
+			<option value="city">COM_JGIVE_CITY</option>
+			<option value="zip">COM_JGIVE_ZIP</option>
+			<option value="phone_no">COM_JGIVE_PHONE</option>
+			<option value="donation_type">COM_JGIVE_DONATATION_TYPE</option>
+			<option value="donation_anonym">COM_JGIVE_DONATE_ANONYMOUSLY</option>
+		</field>
+
+		<field name="campaign_period_in_days"  type="radio" default="0" label="COM_JGIVE_ALL_NO_OF_DAYS" description="COM_JGIVE_ALL_NO_OF_DAYS_DESC" class="btn-group" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<!--Privacy Setting-->
+		<field menu="hide" type="legend" id="jgive-privacy-sets" name="jgive-privacy-sets" label="" default="COM_JGIVE_PRIVACY_SETS" hint="" />
+
+		<!--Added in 2.1.6-->
+		<field name="enable_campaign_terms_conditions" class="btn-group" type="radio" default="0" description="COM_JGIVE_ENABLE_CAMPAIGN_TERM_CONDITIONS_DESC" label="COM_JGIVE_ENABLE_CAMPAIGN_TERM_CONDITIONS">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		<field name="camp_create_terms_article" type="text" default="0" showon="enable_campaign_terms_conditions:1"  label="COM_JGIVE_CAMP_CREATE_ARTICLE" description="COM_JGIVE_CAMP_CREATE_ARTICLE_DESC"/>
+
+		<field name="terms_condition" class="btn-group" type="radio" default="0" label="COM_JGIVE_ENABLE_TERMS" description="COM_JGIVE_ENABLE_TERMS_DESC">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		<field name="payment_terms_article" type="text" default="0" showon="terms_condition:1" label="COM_JGIVE_PAYMENT_ARTICLE" description="COM_JGIVE_PAYMENT_ARTICLE_DESC"/>
+
+		<field menu="hide" type="legend" id="jgive-display-sets" name="jgive-display-sets" label="" default="COM_JGIVE_DISPLAY_SETS" hint="" />
+
+		<field name="bootstrap_version" class="btn-group" type="radio" default="bs3" description="COM_JGIVE_LOAD_BS_VIEWS_DESC" label="COM_JGIVE_LOAD_BS_VIEWS" >
+			<option value="bs3">COM_JGIVE_BS3</option>
+			<option value="bs5">COM_JGIVE_BS5</option>
+		</field>
+
+		<field name="load_bootstrap" type="radio" default="0" label="COM_JGIVE_LOAD_BOOTSTRAP" description="COM_JGIVE_LOAD_BOOTSTRAP_DESC" class="btn-group">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="date_format" type="text" default="j  M  Y" label="COM_JGIVE_SET_DATE_FORMAT" description="COM_JGIVE_SET_DATE_FORMAT_DESC"/>
+
+		<field name="vendor_report_page_size" type="list" default="A4"
+			description="COM_JGIVE_REPORT_PDF_SIZE_DESC"
+			label="COM_JGIVE_REPORT_PDF_SIZE">
+			<option value="A1">COM_JGIVE_REPORT_PDF_SIZE_A1</option>
+			<option value="A2">COM_JGIVE_REPORT_PDF_SIZE_A2</option>
+			<option value="A3">COM_JGIVE_REPORT_PDF_SIZE_A3</option>
+			<option value="A4">COM_JGIVE_REPORT_PDF_SIZE_A4</option>
+			<option value="A5">COM_JGIVE_REPORT_PDF_SIZE_A5</option>
+			<option value="A6">COM_JGIVE_REPORT_PDF_SIZE_A6</option>
+			<option value="Legal">COM_JGIVE_REPORT_PDF_SIZE_LEGAL</option>
+			<option value="Letter">COM_JGIVE_REPORT_PDF_SIZE_LETTER</option>
+			<option value="custom">COM_JGIVE_REPORT_PDF_SIZE_CUSTOME</option>
+		</field>
+
+		<field name="vendor_report_pdf_width" class="validate-numeric" type="text"
+			default="80" label="COM_JGIVE_REPORT_PDF_WIDTH"
+			showon="vendor_report_page_size:custom" description="COM_JGIVE_REPORT_PDF_WIDTH_DESC" />
+		<field name="vendor_report_pdf__height" class="validate-numeric" type="text"
+			default="80" label="COM_JGIVE_REPORT_PDF_HEIGHT"
+			showon="vendor_report_page_size:custom" description="COM_JGIVE_REPORT_PDF_HEIGHT_DESC" />
+
+		<field name="vendor_report_orientation" type="list"
+			default="portrait" label="COM_JGIVE_REPORT_ORIENTATION" description="COM_JGIVE_REPORT_ORIENTATION_DESC">
+			<option value="portrait">COM_JGIVE_PORTRAIT_REPORT</option>
+			<option value="landscape">COM_JGIVE_LANDSCAPE_REPORT</option>
+		</field>
+		<field name="pdf_vendor_report_font" type="list"
+			default="dejavu sans" label="COM_JGIVE_PDF_REPORT_FONT" description="COM_JGIVE_PDF_REPORT_FONT_DESC">
+			<option value="sans-serif">COM_JGIVE_PDF_REPORT_FONT_HELVETICA</option>
+			<option value="times">COM_JGIVE_PDF_REPORT_FONT_TIMER_ROMAN</option>
+			<option value="courier">COM_JGIVE_PDF_REPORT_FONT_COURIER</option>
+			<option value="dejavu sans">COM_JGIVE_PDF_REPORT_FONT_DEVAVUSANS</option>
+			<option value="dejavu sans mono">COM_JGIVE_PDF_REPORT_FONT_DEVAVUSANS_MONO</option>
+			<option value="dejavu serif">COM_JGIVE_PDF_REPORT_FONT_DEVAVUSERIF_BOLD</option>
+			<option value="mgenplus">COM_JGIVE_PDF_REPORT_FONT_MGENPLUS</option>
+		</field>
+		
+	</fieldset>
+
+	<!-- Media setting  -->
+	<fieldset name="image_sets" label="COM_JGIVE_IMG_SETS" description="">
+
+		<field menu="hide" type="legend" id="jgive-image-gallery" name="jgive-image-gallery" label="" default="COM_JGIVE_IMAGE_GALLERY_SETTINGS" hint="" />
+
+		<field name="img_gallery" class="btn-group" type="radio" default="1" label="COM_JGIVE_IMG_GALLERY" description="COM_JGIVE_IMG_GALLERY_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		<field name="max_images" type="text" default="6" showon="img_gallery:1" label="COM_JGIVE_MAX_ALLOWED_IMAGES" description="COM_JGIVE_MAX_ALLOWED_IMAGES_DESC" />
+		<field name="jgive_media_upload_path" type="text" default="media/com_jgive/campaigns" description="COM_JGIVE_MEDIA_PATH_DESC" label="COM_JGIVE_MEDIA_PATH" />
+		<field name="jgive_media_size" type="number" default="15" description="COM_JGIVE_MEDIA_SIZE_DESC" label="COM_JGIVE_MEDIA_SIZE" />
+		<field menu="hide" type="legend" id="jgive-image-display-settings" name="jgive-image-display-settings" label="" default="COM_JGIVE_IMAGE_DISPLAY_SETTINGS" hint="" />
+		<field name="site_panel_images" type="note" label="COM_JGIVE_SITE" />
+		<field name="front_campaign_pin_view" type="list" default="media_m" description="COM_JGIVE_FRONT_CAMPAIGN_PIN_VIEW_IMAGE_DESC" label="COM_JGIVE_FRONT_CAMPAIGN_PIN_VIEW_IMAGE">
+			<option value="media_s">COM_JGIVE_IMAGE_SMALL</option>
+			<option value="media_m">COM_JGIVE_IMAGE_MEDIUM</option>
+			<option value="media_l">COM_JGIVE_IMAGE_LARGE</option>
+			<option value="media">COM_JGIVE_IMAGE_ORIGINAL</option>
+		</field>
+		<field name="front_campaign_detail_view" type="list" default="media" description="COM_JGIVE_FRONT_CAMPAIGN_DETAIL_VIEW_IMAGE_DESC" label="COM_JGIVE_FRONT_CAMPAIGN_DETAIL_VIEW_IMAGE">
+			<option value="media_s">COM_JGIVE_IMAGE_SMALL</option>
+			<option value="media_m">COM_JGIVE_IMAGE_MEDIUM</option>
+			<option value="media_l">COM_JGIVE_IMAGE_LARGE</option>
+			<option value="media">COM_JGIVE_IMAGE_ORIGINAL</option>
+		</field>
+		<field name="front_campaign_gallery_view" type="list" default="media_s" description="COM_JGIVE_FRONT_CAMPAIGN_GALLERY_VIEW_IMAGE_DESC" label="COM_JGIVE_FRONT_CAMPAIGN_GALLERY_VIEW_IMAGE">
+			<option value="media_s">COM_JGIVE_IMAGE_SMALL</option>
+			<option value="media_m">COM_JGIVE_IMAGE_MEDIUM</option>
+			<option value="media_l">COM_JGIVE_IMAGE_LARGE</option>
+			<option value="media">COM_JGIVE_IMAGE_ORIGINAL</option>
+		</field>
+		<field name="admin_panel_images" type="note" label="COM_JGIVE_ADMIN" />
+		<field name="admin_campaign_detail_view" type="list" default="media_s" description="COM_JGIVE_ADMIN_CAMPAIGN_DETAIL_VIEW_IMAGE_DESC" label="COM_JGIVE_ADMIN_CAMPAIGN_DETAIL_VIEW_IMAGE">
+			<option value="media_s">COM_JGIVE_IMAGE_SMALL</option>
+			<option value="media_m">COM_JGIVE_IMAGE_MEDIUM</option>
+			<option value="media_l">COM_JGIVE_IMAGE_LARGE</option>
+			<option value="media">COM_JGIVE_IMAGE_ORIGINAL</option>
+		</field>
+		<field name="admin_campaign_gallery_view" type="list" default="media_s" description="COM_JGIVE_ADMIN_CAMPAIGN_GALLERY_VIEW_IMAGE_DESC" label="COM_JGIVE_ADMIN_CAMPAIGN_GALLERY_VIEW_IMAGE">
+			<option value="media_s">COM_JGIVE_IMAGE_SMALL</option>
+			<option value="media_m">COM_JGIVE_IMAGE_MEDIUM</option>
+			<option value="media_l">COM_JGIVE_IMAGE_LARGE</option>
+			<option value="media">COM_JGIVE_IMAGE_ORIGINAL</option>
+		</field>
+		<field menu="hide" type="legend" id="jgive-image-resize-settings" name="jgive-image-resize-settings" label="" default="COM_JGIVE_IMAGE_RESIZE_SETTINGS" hint="" />
+		<field name="max_size" type="text" default="1024" label="COM_JGIVE_MAX_SIZE" description="COM_JGIVE_MAX_SIZE_DESC" />
+
+		<field name="small_width" type="text" default="128" label="COM_JGIVE_SMALL_WIDTH" description="COM_JGIVE_SMALL_WIDTH_DESC" />
+
+		<field name="small_height" type="text" default="128" label="COM_JGIVE_SMALL_HT" description="COM_JGIVE_SMALL_HT_DESC" />
+
+		<field name="medium_width" type="text" default="200" label="COM_JGIVE_MED_WIDTH" description="COM_JGIVE_MED_WIDTH_DESC" />
+
+		<field name="medium_height" type="text" default="150" label="COM_JGIVE_MED_HT" description="COM_JGIVE_MED_HT_DESC" />
+
+		<field name="large_width" type="text" default="400" label="COM_JGIVE_LARG_WIDTH" description="COM_JGIVE_LARG_WIDTH_DESC" />
+
+		<field name="large_height" type="text" default="300" label="COM_JGIVE_LARG_HT" description="COM_JGIVE_LARG_HT_DESC" />
+
+
+		<field menu="hide" type="legend" id="jgive-video-gallery" name="jgive-video-gallery" label="" default="COM_JGIVE_VIDEO_GALLERY_SETTINGS" hint="" />
+
+		<field name="video_gallery" type="radio" default="0" class="btn-group" label="COM_JGIVE_VIDEO_GALLERY" description="COM_JGIVE_VIDEO_GALLERY_DESC">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="allowedFileExtensions" type="text" cols="60" rows="5" showon="video_gallery:1" default="flv,mp4,webm" label="COM_JGIVE_FILE_TPYE" description="COM_JGIVE_FILE_TPYE_DESC" />
+
+		<field name="max_video_file_size" type="text" default="10" showon="video_gallery:1" label="COM_JGIVE_MAX_ALLOWED_VIDEO_FILE_SIZE" description="COM_JGIVE_MAX_ALLOWED_VIDEO_FILE_SIZE_DESC"/>
+
+		<field name="max_videos" type="text" default="6" showon="video_gallery:1" label="COM_JGIVE_MAX_ALLOWED_VIDEOS" description="COM_JGIVE_MAX_ALLOWED_VIDEOS_DESV"/>
+		<!-- Code added by Nidhi -->
+
+		<field menu="hide" type="legend" id="jgive-video-thumbnail" name="jgive-video-thumbnail" showon="video_gallery:1" label="" default="COM_JGIVE_THUMBNAIL_SETTINGS" hint="" />
+
+		<field name="ffmpeg_path" type="text" default="" showon="video_gallery:1" label="COM_JGIVE_FFMPEG_PATH" description="COM_JGIVE_FFMPEG_PATH_DESC"/>
+
+		<field name="video_thumbnail_path" type="text" default="/media/com_jgive/thumbnails/" showon="video_gallery:1" label="COM_JGIVE_VIDEO_THUMBNAIL_PATH" description="COM_JGIVE_VIDEO_THUMBNAIL_PATH_DESC"/>
+
+		<field name="thumbnail_width" type="text" default="123" showon="video_gallery:1" label="COM_JGIVE_THUMBNAIL_WIDTH" description="COM_JGIVE_THUMBNAIL_WIDTH_DESC"/>
+
+		<field name="thumbnail_height" type="text" default="93" showon="video_gallery:1" label="COM_JGIVE_THUMBNAIL_HEIGHT" description="COM_JGIVE_THUMBNAIL_HEIGHT_DESC"/>
+		<!--<field name="jgive_video_upload" type="text" default="1" label="COM_JGIVE_VIDEO_UPLOAD" description="COM_JGIVE_VIDEO_UPLOAD"/>-->
+
+		<!--<field name="process_video" type="radio" default="1" class="btn-group" label="COM_JGIVE_PROCESS_VIDEO" description="COM_JGIVE_PROCESS_VIDEO">
+			<option value="1">COM_JGIVE_IMMEDIATE</option>
+			<option value="0">COM_JGIVE_CRON_JOB</option>
+		</field>
+		<field name="video_batch" type="text" default="" label="COM_JGIVE_VIDEO_BATCH" description="COM_JGIVE_VIDEO_BATCH"/>-->
+		<!--<field name="private_key_cronjob_thumbnail" class="inputbox" default="un217"  label="COM_JGIVE_API_CRON" description="COM_JGIVE_API_CRON_DESC" />
+		<field name="cronjoburlthumbnail" type="Cron" label="COM_JGIVE_CRON" description="COM_JGIVE_CRON_DESC" />-->
+		<!-- End of code -->
+
+		<field menu="hide" type="legend" id="jgive-campaign-report" name="jgive-campaign-report" label="" default="COM_JGIVE_REPORT_ATTACHMENT_SETTINGS" hint="" />
+		<field name="allowed_report_attachments" type="text" default="doc,docx,pdf,ppt,pptx" label="COM_JGIVE_REPORT_ATTACHMENT_ALLOWED_EXTENSIONS" description="COM_JGIVE_REPORT_ATTACHMENT_ALLOWED_EXTENSIONS_DESC" />
+		<field name="max_report_attachments" type="number" default="6" label="COM_JGIVE_REPORT_ATTACHMENT_MAX_ALLOWED" description="COM_JGIVE_REPORT_ATTACHMENT_MAX_ALLOWED_DESC" />
+		<field name="max_report_attachment_size" type="number" default="6" label="COM_JGIVE_REPORT_ATTACHMENT_MAX_SIZE" description="COM_JGIVE_REPORT_ATTACHMENT_MAX_SIZE_DESC" />
+		<field name="report_attachment_upload_path" type="text" default="media/com_jgive/campaigns/reports/attachments" description="COM_JGIVE_REPORT_ATTACHMENT_UPLOAD_PATH_DESC" label="COM_JGIVE_REPORT_ATTACHMENT_UPLOAD_PATH" />
+	</fieldset>
+
+	<!-- Payment setting  -->
+	<fieldset name="payment_settings" label="COM_JGIVE_PAYMENT_SETTINGS" description="" addfieldpath="/media/com_jgive/fields" >
+
+		<field name="gateways" type="gatewayplg" default="paypal" multiple="multiple" label="COM_JGIVE_SELECT_GATEWAY" description="COM_JGIVE_SELECT_GATEWAY_DES" />
+		<field name="currency" type="currencylist" label="COM_JGIVE_CURRENCY" description="COM_JGIVE_CURRENCY_DESC" />
+		<field name="currency_symbol" class="radio btn-group" type="radio" default="symbol" label="COM_JGIVE_CURRENCY_SYM" description="COM_JGIVE_CURRENCY_SYM_DESC">
+			<option value="code">COM_JGIVE_CURRENCY_CODE</option>
+			<option value="symbol">COM_JGIVE_CURRENCY_SYMBOL</option>
+		</field>
+
+		<field name="currency_display_format" type="text" default="{CURRENCY_SYMBOL}{AMOUNT}" label="COM_JGIVE_CURRENCY_DISPLAY_FORMAT" description="COM_JGIVE_CURRENCY_DISPLAY_FORMAT_DESC" size="5" />
+
+		<field name="amount_separator" type="text" default="." label="COM_JGIVE_AMOUNT_SEPARATOR" description="COM_JGIVE_AMOUNT_SEPARATOR_DESC" />
+
+		<field name="allow_pan_verification" class="radio btn-group" type="radio" default="no" showon="currency:INR" label="COM_JGIVE_PAN_ALLOW_VERIFICATION" description="COM_JGIVE_PAN_ALLOW_VERIFICATION_DESC">
+			<option value="yes">COM_JGIVE_YES</option>
+			<option value="no">COM_JGIVE_NO</option>
+		</field>
+		
+		<field name="pan_encryption_key" type="text" showon="currency:INR[AND]allow_pan_verification:yes" label="COM_JGIVE_PAN_ENCRYPTION_KEY" description="COM_JGIVE_PAN_ENCRYPTION_KEY_DESC" />
+		
+		<field name="pan_amount_limit" type="text" default="0" showon="currency:INR[AND]allow_pan_verification:yes" label="COM_JGIVE_PAN_VERIFICATION_REQUIRED_FOR_AMOUNT" description="COM_JGIVE_PAN_VERIFICATION_REQUIRED_FOR_AMOUNT_DESC" />
+		
+		<field name="allow_high_value_donation" class="btn-group" type="radio" default="1" label="COM_JGIVE_ALLOW_HIGH_VALUE_DONATION" description="COM_JGIVE_ALLOW_HIGH_VALUE_DONATION_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		
+		<field name="max_allow_high_donation_value" type="text" default="0" showon="allow_high_value_donation:0" label="COM_JGIVE_MAX_HIGH_VALUE_DONATION" description="COM_JGIVE_MAX_HIGH_VALUE_DONATION_DESC" />	
+
+		<field name="send_payments_to_owner" class="btn-group" type="radio" default="0" label="COM_JGIVE_SEND_PAYMENTS_TO_OWNER" description="COM_JGIVE_SEND_PAYMENTS_TO_OWNER_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="fee_mode" class="radio btn-group" type="radio" default="inclusive" showon="send_payments_to_owner:0" label="COM_JGIVE_ADMIN_FEE_MODE" description="COM_JGIVE_ADMIN_FEE_MODE_DESC">
+			<option value="inclusive">COM_JGIVE_ADMIN_FEE_MODE_INCLUSIVE</option>
+			<option value="exclusive">COM_JGIVE_ADMIN_FEE_MODE_EXCLUSIVE</option>
+		</field>
+		
+		<field name="exclusive_fee_optional" class="radio btn-group" type="radio" default="0" showon="fee_mode:exclusive[AND]send_payments_to_owner:0" label="COM_JGIVE_EXCLUSIVE_FEE_OPTION" description="COM_JGIVE_EXCLUSIVE_FEE_OPTION_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="commission_fee" type="text" default="0" class="validate-numeric" showon="send_payments_to_owner:0" label="COM_JGIVE_COMMISSION" description="COM_JGIVE_COMMISSION_DESC" />
+
+		<field name="fixed_commissionfee" type="text" default="0" class="validate-numeric" showon="send_payments_to_owner:0" label="COM_JGIVE_FIXED_COMMISSION" description="COM_JGIVE_FIXED_COMMISSION_DESC" />
+
+		<field name="vat_for_donor" class="btn-group" type="radio" default="0" label="COM_JGIVE_VAT_NUMBER_FOR_DONOR" description="COM_JGIVE_VAT_NUMBER_FOR_DONOR_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="admin_vat_reg_number" type="text" default="" class="" showon="vat_for_donor:1" label="COM_JGIVE_ADMIN_VAT_REG_NUM" description="COM_JGIVE_ADMIN_VAT_REG_NUM_DESC" />
+
+		<field name="guest_donation" class="btn-group" type="radio" default="0" label="COM_JGIVE_SELECT_GUEST_DONATIONS" description="COM_JGIVE_SELECT_GUEST_DONATIONS_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="recurring_donation" class="btn-group" type= "radio" default="0" label="COM_JGIVE_RECURRING_DONATION" description="COM_JGIVE_RECURRING_DONATION_DESC">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="quick_donation" class="btn-group" type= "radio" default="0" label="COM_JGIVE_PAYMENT_FLOW" description="COM_JGIVE_PAYMENT_FLOW_DESC">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<!-- Order setting  -->
+		<field menu="hide" type="legend" id="" name="order_settings" label="" default="COM_JGIVE_ORDER_SETTINGS" hint="" />
+
+		<field name="order_prefix" type="text" default="JGOID" maxlength="5" label="COM_JGIVE_ORDER_PREFIX" description="COM_JGIVE_ORDER_PREFIX_DESC" />
+
+		<field name="separator" type="text" default="-" maxlength="1" label="COM_JGIVE_SEPARATOR" description="COM_JGIVE_SEPARATOR_DESC" />
+
+		<field name="random_orderid" class="btn-group" type="radio" default="0" label="COM_JGIVE_RANDOM_OREDRID" description="COM_JGIVE_RANDOM_OREDRID_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="padding_count" type="text" default="3" class="validate-numeric" label="COM_JGIVE_PADDING_COUNT" description="COM_JGIVE_PADDING_COUNT_DESC" />
+
+		<!-- Group commission for campaigns settings  -->
+		<field menu="hide" type="legend" id="jgive-usr-group-sets" name="jgive-usr-group-sets" label="" default="COM_JGIVE_GIVE_USERGROUPWISE_COM" hint="" />
+
+		<field name="usergroup" id="jgive_usr_group_commision" type="commision" default="" label="" description="" />
+
+	</fieldset>
+
+	<!-- Email Notification setting  -->
+	<fieldset name="email_settings" label="COM_JGIVE_EMAIL_SETTINGS" description="COM_JGIVE_CONFIG_MIGRATION_NOTE" addfieldpath="/media/com_jgive/fields" >
+		<field name="email" type="text" default="" label="COM_JGIVE_ADMIN_EMAIL" description="COM_JGIVE_ADMIN_EMAIL_DESC" />
+		<field menu="hide" name="" type="legend" default="COM_JGIVE_NEW_CAMPAIGN_NOTIFY" label="" description="" />
+		<field name="private_key_newcamp" class="inputbox" default="jg25" label="COM_JGIVE_NEW_CAMP_API_CRON" description="COM_JGIVE_NEW_CAMP_API_CRON_DESC" />
+		<field name="cronjoburl_newcamp" type="Cron" label="COM_JGIVE_NEW_CAMP_CRON" description="COM_JGIVE_NEW_CAMP_CRON_DESC" />
+		
+		<field name="private_key_vendor_report_monthly" class="inputbox" default="jg25" label="COM_JGIVE_VENDOR_REPORT_MONTHLY_API_CRON" description="COM_JGIVE_VENDOR_REPORT_MONTHLY_API_CRON" />
+		<field name="cronjoburl_vendor_report_monthly" type="Cron" label="COM_JGIVE_VENDOR_REPORT_MONTHLY_CRON" description="COM_JGIVE_VENDOR_REPORT_MONTHLY_CRON_DESC" />
+
+		<field name="private_key_vendor_report_quarterly" class="inputbox" default="jg25" label="COM_JGIVE_VENDOR_REPORT_QUARTERLY_API_CRON" description="COM_JGIVE_VENDOR_REPORT_QUARTERLY_API_CRON" />
+		<field name="cronjoburl_vendor_report_quarterly" type="Cron" label="COM_JGIVE_VENDOR_REPORT_QUARTERLY_CRON" description="COM_JGIVE_VENDOR_REPORT_QUARTERLY_CRON_DESC" />
+
+		<field name="private_key_vendor_report_yearly" class="inputbox" default="jg25" label="COM_JGIVE_VENDOR_REPORT_YEARLY_API_CRON" description="COM_JGIVE_VENDOR_REPORT_YEARLY_API_CRON" />
+		<field name="cronjoburl_vendor_report_yearly" type="Cron" label="COM_JGIVE_VENDOR_REPORT_YEARLY_CRON" description="COM_JGIVE_VENDOR_REPORT_YEARLY_CRON_DESC" />
+		
+	</fieldset>
+
+	<!--Campaign_settings-->
+	<fieldset name="campaign_settings" label="COM_JGIVE_CAMPAIGN_DETAIL_SETTINGS" description="" addfieldpath="/media/com_jgive/fields" >
+		<field name="campaign_activity" class="btn-group" type="radio" default="1" label="COM_JGIVE_CAMPAIGN_DETAIL_ACTIVITY" description="COM_JGIVE_CAMPAIGN_DETAIL_ACTIVITY_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		<field name="enable_reports" type="radio" default="0" label="COM_JGIVE_ENABLE_REPORTS" description="COM_JGIVE_ENABLE_REPORTS_DESC" class="btn-group">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+		<field name="report_total_chars" type="text" default="200" label="COM_JGIVE_REPORT_TOTAL_WORDS" description="COM_JGIVE_REPORT_TOTAL_WORDS_DESC" showon="enable_reports:1" />
+	</fieldset>
+
+	<!--Social sharing settings-->
+	<fieldset name="social_sharing_settings" label="COM_JGIVE_SOCIAL_SETS" description="">
+		<field name="social_sharing" class="btn-group" type="radio" default="1" label="COM_JGIVE_ENABLE_SOCIAL_SHARING" description="COM_JGIVE_ENABLE_SOCIAL_SHARING_DES" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="social_shring_type" class="btn-group" type="radio" default="native" label="COM_JGIVE_SOCIAL_SHARING_TYPE" description="COM_JGIVE_SOCIAL_SHARING_TYPE_DESC" >
+			<option value="addthis">COM_JGIVE_ADDTHIS_SOCIAL</option>
+			<option value="native">COM_JGIVE_NATIVE_NATIVE</option>
+			<option value="addtoany">COM_JGIVE_ADDTOANY_SOCIAL</option>
+		</field>
+		<field name="addtoany_share_buttons" filter="raw" type="textarea" rows="3" default="" label="COM_JGIVE_SELECT_ADDTOANY_BUTTONS" showon="social_shring_type:addtoany" description="COM_JGIVE_SELECT_ADDTOANY_BUTTONS_DESC"  hint="COM_JGIVE_SELECT_ADDTOANY_BUTTONS_HINT"/>
+		<field name="addtoany_universal_button" class="btn-group" type="radio" default="after" showon="social_shring_type:addtoany" label="COM_JGIVE_ADDTOANY_UNIVERSAL_BUTTON" description="COM_JGIVE_ADDTOANY_UNIVERSAL_BUTTON_DESC" >
+			<option value="disable">COM_JGIVE_ADDTOANY_UNIVERSAL_DISABLE</option>
+			<option value="before">COM_JGIVE_ADDTOANY_UNIVERSAL_BEFORE</option>
+			<option value="after">COM_JGIVE_ADDTOANY_UNIVERSAL_AFTER</option>
+		</field>
+		<field name="addthis_publishid" type="text" default="" label="COM_JGIVE_SELECT_ADDTHIS_PUBLISHED_ID" description="COM_JGIVE_SELECT_ADDTHIS_PUBLISHED_ID_DES" />
+
+		<field name="allow_vendor_to_share_campaign" class="btn-group" type="radio" default="0" label="COM_JGIVE_ALLOW_VENDOR_TO_SHARE_CAMPAIGN" description="COM_JGIVE_ALLOW_VENDOR_TO_SHARE_CAMPAIGN_DESC" >
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="social_sharing_options" type="list" default="" multiple="multiple" label="COM_JGIVE_SOCIAL_SHARING_OPTIONS" description="COM_JGIVE_SOCIAL_SHARING_OPTIONS_DESC" showon="allow_vendor_to_share_campaign:1">
+<!--
+			<option value="sms">COM_JGIVE_SOCIAL_SHARING_OPTION_SMS</option>
+-->
+			<option value="email">COM_JGIVE_SOCIAL_SHARING_OPTION_EMAIL</option>
+			<option value="facebook">COM_JGIVE_SOCIAL_SHARING_OPTION_FACEBOOK</option>
+			<option value="twitter">COM_JGIVE_SOCIAL_SHARING_OPTION_TWITTER</option>
+			<option value="pinterest">COM_JGIVE_SOCIAL_SHARING_OPTION_PINTEREST</option>
+			<option value="linkedin">COM_JGIVE_SOCIAL_SHARING_OPTION_LINKEDIN</option>
+			<option value="whatsapp">COM_JGIVE_SOCIAL_SHARING_OPTION_WHATSAPP</option>
+		</field>
+	</fieldset>
+
+	<!-- PayPal mass payments setting  -->
+	<fieldset name="masspayment_settings" label="COM_JGIVE_MASSPAY_SETTINGS" description="" addfieldpath="/media/com_jgive/fields" >
+
+		<field name="min_val_masspay" type="text" class="validate-numeric" default="100" maxlength="10" label="COM_JGIVE_MIN_AMOUNT" description="COM_JGIVE_MIN_AMOUNT_DESC" />
+
+		<field name="apiuser" type="text" default=""  label="COM_JGIVE_UDER_API" description="COM_JGIVE_UDER_API_DESC" />
+
+		<field name="apipass" type="text" default="" label="COM_JGIVE_API_PASSWD" description="COM_JGIVE_API_PASSWD_DESC" />
+
+		<field  name="apisign" type="text" default="" label="COM_JGIVE_API_SIGN" description="COM_JGIVE_API_SIGN_DESC" />
+
+		<field  name="sandbox" class="btn-group" type="radio" default="0" label="COM_JGIVE_SANDBOX" description="COM_JGIVE_SANDBOX_DESC" >
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field name="apiv" type="text" default="87" class="validate-numeric" label="COM_JGIVE_API_VER" description="COM_JGIVE_API_VER_DESC" />
+
+		<field name="private_key_cronjob" class="inputbox" default="az197"  label="COM_JGIVE_API_CRON" description="COM_JGIVE_API_CRON_DESC" />
+
+		<field name="cronjoburl" type="Cron" label="COM_JGIVE_CRON" description="COM_JGIVE_CRON_DESC" />
+
+	</fieldset>
+
+	<!-- Updates setting  -->
+	<fieldset name="updates" label="COM_JGIVE_OPTIONS_UPDATES_LBL">
+		<field name="downloadid" type="text" default="" size="30" label="COM_JGIVE_OPTIONS_DOWNLOADID_LBL" description="COM_JGIVE_OPTIONS_DOWNLOADID_DESC" />
+	</fieldset>
+
+	<!-- Permission setting  -->
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_jgive" section="component" />
+	</fieldset>
+</config>

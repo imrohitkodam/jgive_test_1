@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="beneficiary_story" label="COM_JGIVE_BENEFICIARY_STORY_DETAILS">
+		<field
+			name="id"
+			type="hidden" />
+
+		<field
+			name="beneficiary_name"
+			type="text"
+			label="COM_JGIVE_BENEFICIARY_STORY_NAME"
+			description="COM_JGIVE_BENEFICIARY_STORY_NAME_TOOLTIP"
+			required="true" />
+		
+		<field
+			name="beneficiary_position"
+			type="text"
+			label="COM_JGIVE_BENEFICIARY_POSITION"
+			description="COM_JGIVE_BENEFICIARY_POSITION_TOOLTIP" />
+
+		<field
+			name="story_title"
+			type="text"
+			label="COM_JGIVE_BENEFICIARY_STORY_TITLE"
+			description="COM_JGIVE_BENEFICIARY_STORY_TITLE_TOOLTIP"
+			required="true" 
+			filter="STRING"
+			maxlength="250" />
+
+		<field
+			name="story_description"
+			type="textarea"
+			label="COM_JGIVE_BENEFICIARY_STORY_DESC"
+			description="COM_JGIVE_BENEFICIARY_STORY_DESC_TOOLTIP"
+			rows="5"
+			cols="30"
+			required="true" 
+			filter="safehtml" />
+
+		<field
+			name="image_url"
+			type="file"
+			label="COM_JGIVE_BENEFICIARY_STORY_IMAGE"
+			description="COM_JGIVE_BENEFICIARY_STORY_IMAGE_TOOLTIP"
+			onchange="tjMediaFile.validateFile(this,0,0)"
+			menu_published="0"
+			upload_directory="media/com_jgive"
+			accept="image/jpeg,image/png,image/jpg,image/webp" />
+
+		<field
+			name="image"
+			type="imagedisplay"
+			default=""
+			label=""
+			description="" />
+	</fieldset>
+</form>

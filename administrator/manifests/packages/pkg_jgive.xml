@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>JGive Package</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<packagename>jgive</packagename>
+	<packager>Techjoomla Team</packager>
+	<description />
+	<files>
+		<file type="component" id="com_tjprivacy">com_tjprivacy.zip</file>
+		<file type="component" id="com_tjfields">com_tjfields.zip</file>
+		<file type="component" id="com_tjnotification">com_tjnotification.zip</file>
+		<file type="component" id="com_tjvendors">com_tjvendors.zip</file>
+		<file type="component" id="com_tjreports">com_tjreports.zip</file>
+		<file type="component" id="com_jgive">com_jgive.zip</file>
+		<file type="component" id="com_activitystream">com_activitystream.zip</file>
+		<file type="component" id="com_jlike">com_jlike.zip</file>
+	</files>
+
+	<scriptfile>script.pkg_jgive.php</scriptfile>
+	<updateservers>
+		<server type="collection" priority="1" name="JGive">
+			<![CDATA[https://techjoomla.com/updates/stream/jgive.xml?format=xml]]>
+		</server>
+	</updateservers>
+</extension>
+
+

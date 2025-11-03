@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JGIVE_TITLE_CREATE_NEW_ORGANIZATION">
+		<message>
+			<![CDATA[COM_JGIVE_TITLE_CREATE_NEW_ORGANIZATION_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JGIVE_TITLE_CREATE_NEW_ORGANIZATION</name>
+		<description>COM_JGIVE_TITLE_CREATE_NEW_ORGANIZATION_DESC</description>
+		<params></params>
+	</state>
+</metadata>

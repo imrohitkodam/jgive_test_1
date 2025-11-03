@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="campaignform">
+		<message>
+			<![CDATA[
+				CAMPAIGN_FORM_VIEW
+			]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="COM_JGIVE_TITLE_CREATE_NEW_CAMPAIGN" msg="COM_JGIVE_TITLE_CREATE_NEW_CAMPAIGN_DESC" />
+		</options>
+	</view>
+</metadata>

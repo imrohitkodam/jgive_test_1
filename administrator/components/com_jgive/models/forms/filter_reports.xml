@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field 
+			name="search" 
+			type="text" 
+			hint="COM_JGIVE_CAMPAIGN_WISE_REPORT_SEARCH"
+			label="COM_USERS_FILTER_SEARCH_DESC"
+			class="js-stools-search-string" />
+		
+		<field 
+			name="campaign_type" 
+			type="list" 
+			label="COM_CONTENT_FILTER_PUBLISHED" 
+			description="COM_CONTENT_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();">
+				<option value="">COM_JGIVE_FILTER_SELECT_TYPE</option>
+				<option value="donation">COM_JGIVE_CAMPAIGN_TYPE_DONATION</option>
+				<option value="investment">COM_JGIVE_CAMPAIGN_TYPE_INVESTMENT</option>
+		</field>
+		<field 
+			name="campaign" 
+			type="sql" 
+			class="inputbox" 
+			onchange="this.form.submit();"
+			query="SELECT '' AS `id`, '- Please Select Campaign -' AS `title` UNION SELECT `id`, `title` FROM `#__jg_campaigns`" 
+			key_field="id" value_field="title"/>
+		
+		<field 
+			name="org_ind_type_report" 
+			type="list" 
+			label="COM_CONTENT_FILTER_PUBLISHED" 
+			description="COM_CONTENT_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();">
+				<option value="">COM_JGIVE_SELECT_TYPE_ORG_INDIVIDUALS</option>
+				<option value="non_profit">COM_JGIVE_ORG_NON_PROFIT</option>
+				<option value="self_help">COM_JGIVE_SELF_HELP</option>
+				<option value="individuals">COM_JGIVE_SELF_INDIVIDUALS</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="20"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_INDIVIDUAL_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

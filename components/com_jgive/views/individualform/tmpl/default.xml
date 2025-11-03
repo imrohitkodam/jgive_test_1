@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JGIVE_TITLE_CREATE_NEW_INDIVIDUAL_CONTACT">
+		<message>
+			<![CDATA[COM_JGIVE_TITLE_CREATE_NEW_INDIVIDUAL_CONTACT_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JGIVE_TITLE_CREATE_NEW_INDIVIDUAL_CONTACT</name>
+		<description>COM_JGIVE_TITLE_CREATE_NEW_INDIVIDUAL_CONTACT_DESC</description>
+		<params></params>
+	</state>
+</metadata>

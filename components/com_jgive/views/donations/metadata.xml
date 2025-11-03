@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Donations">
+		<message>
+			<![CDATA[
+				Donations view
+			]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="COM_JGIVE_TITLE_MY_DONATIONS" msg="COM_JGIVE_TITLE_MY_DONATIONS_DESC" />
+			<option value="all_donations" name="COM_JGIVE_TITLE_ALL_DONATIONS" msg="COM_JGIVE_TITLE_ALL_DONATIONS_DESC" />
+		</options>
+	</view>
+</metadata>

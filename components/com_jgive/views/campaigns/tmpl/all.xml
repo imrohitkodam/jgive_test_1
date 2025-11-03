@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<metadata>
+		<layout title="COM_JGIVE_TITLE_ALL_CAMPAIGN">
+			<message>
+				<![CDATA[COM_JGIVE_TITLE_ALL_CAMPAIGN_DESC]]>
+			</message>
+		</layout>
+
+		<!-- Add fields to the parameters object for the layout. -->
+		<fields name="params">
+			<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+				<field name="defaultCatId" type="category"
+					description="COM_JGIVE_CATEGORIES_CHOOSE_CATEGORY_DESC"
+					extension="com_jgive"
+					label="COM_JGIVE_CATEGORIES_CHOOSE_CATEGORY_LABEL"
+					show_root="true"
+					required="true"
+				/>
+
+				<field name="show_sorting_options" type="radio" description="COM_JGIVE_SORT_OPTION_DESC" label="COM_JGIVE_SORT_OPTION" class="btn-group" default="1">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<field name="default_sort_by_option" type="list" description="COM_JGIVE_DEFAULT_SORT_DESC" label="COM_JGIVE_DEFAULT_SORT" class="btn-group" default="">
+					<option value="">COM_JGIVE_SELECT_SORT_OPTION</option>
+					<option value="title">COM_JGIVE_TITLE</option>
+					<option value="created">COM_JGIVE_CREATED</option>
+					<option value="modified">COM_JGIVE_MODIFIED</option>
+					<option value="start_date">COM_JGIVE_START_DATE</option>
+					<option value="end_date">COM_JGIVE_END_DATE</option>
+					<option value="goal_amount">COM_JGIVE_GOAL_AMOUNT</option>
+					<option value="amount_received">COM_JGIVE_AMOUNT_RECEIVED</option>
+					<option value="remaining_amount">COM_JGIVE_REMAINING_AMOUNT</option>
+					<option value="campaignDonorsCount">COM_JGIVE_TOTAL_DONORS_INVESTORS</option>
+				</field>
+
+				<field name="filter_order_Dir" type="list" description="COM_JGIVE_DEFAULT_ORDER_DIR_DESC" label="COM_JGIVE_DEFAULT_ORDER_DIR" class="btn-group" default="">
+					<option value="">COM_JGIVE_ORDERING</option>
+					<option value="asc">COM_JGIVE_ASC</option>
+					<option value="desc">COM_JGIVE_DESC</option>
+				</field>
+
+				<field name="show_search_filter" type="radio" description="COM_JGIVE_SEARCH_FILTER_DESC" label="COM_JGIVE_SEARCH_FILTER" class="btn-group" default="1">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<field name="show_filters" type="radio" description="COM_JGIVE_SHOW_FILTERS_DESC" label="COM_JGIVE_SHOW_FILTERS" class="btn-group" default="1">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<field name="show_type_filter" type="radio" description="COM_JGIVE_TYPE_MENU_DESC" label="COM_JGIVE_TYPE_MENU" class="btn-group" default="1">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<field name="show_category_filter" type="radio" description="COM_JGIVE_CAT_MENU_DESC" label="COM_JGIVE_CAT_MENU" class="btn-group" default="1">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<!--organization or individual filter since version 1.5.1 -->
+				<field name="show_org_ind_type_filter" type="radio" description="COM_JGIVE_ORG_FILTER_MENU_DESC" label="COM_JGIVE_ORG_FILTER_MENU" class="btn-group" default="0">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<field name="show_place_filter" type="radio" description="COM_JGIVE_PLACE_MENU_DESC" label="COM_JGIVE_PLACE_MENU" class="btn-group" default="0">
+					<option value="1">COM_JGIVE_YES</option>
+					<option value="0">COM_JGIVE_NO</option>
+				</field>
+
+				<field name="layout_to_load" type="list" description="COM_JGIVE_LAYOUT_TO_SHOW_DESC" label="COM_JGIVE_LAYOUT_TO_SHOW" class="btn-group" default="pin_layout">
+					<option value="pin_layout">COM_JGIVE_PIN_LAYOUT</option>
+					<option value="blog_layout">COM_JGIVE_BLOG_LAYOUT</option>
+				</field>
+
+				<field name="pin_width" class="validate-numeric" type="number" default="245" label="COM_JGIVE_PIN_WIDTH" description="COM_JGIVE_PIN_WIDTH_DESC" min="200" required="required" showon="layout_to_load:pin_layout"/>
+
+				<field name="pin_padding" type="number" class="validate-numeric" min="5" default="10" label="COM_JGIVE_PIN_PADDING" description="COM_JGIVE_PIN_PADDING_DESC" showon="layout_to_load:pin_layout" />
+			</fieldset>
+		</fields>
+
+		<state>
+			<name>All Campaigns (blog view)</name>
+			<description>All Campaigns (blog view)</description>
+		</state>
+	</metadata>

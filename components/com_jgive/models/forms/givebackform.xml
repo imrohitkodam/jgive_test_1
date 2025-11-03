@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="text"
+			default="0"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field
+			name="title"
+			type="text"
+			default=""
+			required="true"
+			class="subform_givebacks_title"
+			label="COM_JGIVE_GIVEBACK_TITLE"
+			hint="COM_JGIVE_GIVEBACK_TITLE"
+			description="COM_JGIVE_GIVEBACK_TITLE_TOOLTIP"
+			filter="STRING"
+			maxlength="250"/>
+
+		<field
+			name="campaign_id"
+			type="foreignkey"
+			class="inputbox"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_CAMPAIGN_ID"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_CAMPAIGN_ID"
+			input_type="list"
+			table="#__jg_campaigns"
+			key_field="id"
+			value_field="title" />
+
+		<field
+			name="amount"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_AMOUNT"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_AMOUNT"
+			filter="safehtml" />
+
+		<field
+			name="description"
+			type="textarea"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_DESCRIPTION"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_DESCRIPTION" />
+
+		<field
+			name="order"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_ORDER"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_ORDER"
+			filter="safehtml" />
+
+		<field
+			name="quantity"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_QUANTITY"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_QUANTITY"
+			filter="safehtml" />
+
+		<field
+			name="total_quantity"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_TOTAL_QUANTITY"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_TOTAL_QUANTITY"
+			filter="safehtml" />
+
+		<field
+			name="image_path"
+			type="text"
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_IMAGE_PATH"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_IMAGE_PATH" />
+
+		<field
+			name="created_by"
+			type="createdby"
+			default=""
+			label="COM_JGIVE_FORM_LBL_GIVEBACK_CREATED_BY"
+			description="COM_JGIVE_FORM_DESC_GIVEBACK_CREATED_BY" />
+	</fieldset>
+</form>

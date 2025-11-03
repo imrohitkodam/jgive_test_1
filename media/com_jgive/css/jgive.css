@@ -1,0 +1,706 @@
+/* BEM Format Page cover Ex: pin-form Block: Ex: pin / pinView Element: Ex: pinview__input Modifier: Ex: pinview__input--btn */
+
+/***************** Common class *******************/
+#jgiveWrapper .border-t {
+  border-top: 1px solid #ddd;
+}
+
+#jgiveWrapper .border-b {
+  border-bottom: 1px solid #ddd;
+}
+
+#jgiveWrapper .border-gray {
+  border: 1px solid #ddd;
+}
+
+#jgiveWrapper .text-aqua {
+  color: #28d49a;
+}
+
+#jgiveWrapper .fa-times:before {
+  content: "\f067";
+  font-family: "FontAwesome";
+}
+
+#jgiveWrapper .text-uppercase {
+  text-transform: uppercase;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.font-600 {
+  font-weight: 600 !important;
+}
+
+.print-receipt label, .fs-15 {
+  font-size: 15px;
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.text-gray {
+  color: #9E9E9E;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.jgive-float-right {
+  float: right !important;
+}
+
+/***************** End Common class *******************/
+
+#jgiveWrapper .embed-responsive {
+  height: auto !important;
+}
+
+#jgiveWrapper .donar_img, #jgiveWrapper .activity img {
+  max-width: 25px;
+}
+
+#jgiveWrapper .campaignPromoter__info {
+  line-height: 1.428;
+}
+
+#jgiveWrapper .btn-donate {
+  padding: 3px 35px;
+}
+
+#jgiveWrapper .campaignTab__ul {
+  margin-bottom: 0;
+}
+
+#jgiveWrapper .campaignTab__ul a {
+  padding-bottom: 10px;
+}
+
+#jgiveWrapper .campaignTab .nav-tabs>li.active>a, #jgiveWrapper .campaignTab .nav-tabs>li>a:hover, #jgiveWrapper .campaignTab .nav-tabs>li.active>a:focus {
+  border-bottom: 5px solid;
+}
+
+#jgiveWrapper .list__separation {
+  border-right: 1px solid #999;
+  line-height: 2;
+  padding-right: 5px;
+  display: inline-block;
+}
+
+#jgiveWrapper .progress__info {
+  padding: 1px 0;
+  background-color: #e6e6e6;
+  height: 8px;
+}
+
+#jgiveWrapper .progress__info--color {
+  background-color: #010156;
+}
+
+#jgiveWrapper .pin__title:hover {
+  background: #1F547D;
+  color: #ddd;
+}
+
+#jgiveWrapper .pin__title:hover a {
+  color: #fff;
+}
+
+#jgiveWrapper .pin h4 {
+  font-size: 16px;
+}
+
+#jgiveWrapper .pin:hover {
+  border: 1px solid #014982;
+  transition: all .5s;
+}
+
+#jgiveWrapper .pin__rubberStamp {
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: rgb(98, 196, 98);
+  opacity: 0.6;
+  -webkit-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  top: -80px;
+  left: 12%;
+}
+
+#jgiveWrapper .pin__rubberStampText {
+  border: 2px solid rgb(98, 196, 98);
+}
+
+#jgiveWrapper .media_image_width {
+  padding-top: 50%;
+}
+/*-----Search-----*/
+#jgiveWrapper .campaign__search input[type=text] {
+  height: 35px;
+  top: 0;
+}
+
+#jgiveWrapper .campaign__search {
+  display : inline-block;
+}
+
+#jgiveWrapper .campaign__search--clear {
+  background-color: transparent;
+  right: 132px;
+  z-index: 5;
+}
+
+#jgiveWrapper #dashboardform .campaign__search--clear {
+  right: 190px;
+}
+
+#jgiveWrapper .search__campaign--wrapper {
+  display: flex;
+}
+/*----Modal pop-up-----*/
+#jgiveWrapper .modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+#jgiveWrapper #jgive_content .modal, #jgiveWrapper #jgive-checkout .modal, #jgiveWrapper #launch-campaign-modal .modal {
+  position: initial;
+  display: initial;
+}
+/* #jgiveWrapper .modal:before {
+     content: '';
+     display: inline-block;
+     height: 100%;
+     vertical-align: middle;
+     margin-right: -4px;
+}
+ */
+#jgiveWrapper .modal-dialog {
+  top: 50%;
+  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+}
+
+#jgiveWrapper .chzn-container-single .chzn-single, #jgiveWrapper launchForm__type select {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #999;
+  box-shadow: none;
+}
+
+#jgiveWrapper .calendar-container .time select {
+  width: 63px !important;
+}
+
+#jgiveWrapper .js-calendar {
+  width: 250px;
+}
+
+#jgiveWrapper .field-calendar .btn, #jgiveWrapper .launchForm input[type="text"], #jgiveWrapper .launchForm__date .input-append, #jgiveWrapper .chzn-container-single .chzn-single, #jgiveWrapper input[type="number"], #jgiveWrapper .launchForm__goal .btn :not(#jgiveWrapper #give-away .subform-repeatable-wrapper input[type="text"]) not(#jgiveWrapper #give-away .subform-repeatable-wrapper input[type="number"]) {
+  height: 30px;
+}
+
+#jgiveWrapper .field-calendar .btn, #jgiveWrapper .launchForm__goal .btn {
+  padding: 2px 10px;
+}
+
+#jgiveWrapper .launchForm textarea, #jgiveWrapper .launchForm__desc textarea {
+  min-height: 70px;
+}
+
+.tjBs3 .launchForm textarea, .tjBs3 .launchForm input[type="text"], .tjBs3 .launchForm__date .input-append, .tjBs3 .chzn-container, .tjBs3 .launchForm__goal input[type="number"], .tjBs3 .jgive-checkout-steps input[type="text"], .tjBs3 .jgive-checkout-steps input[type="password"], .tjBs3 .jgive-checkout-steps input[type="email"] {
+  width: 100%!important;
+}
+
+#jgiveWrapper .launchForm__date .icon-calendar:before {
+  content: "\f073";
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+#jgiveWrapper .launchForm__date .input-append {
+  display: inline-flex;
+}
+
+#jgiveWrapper .launchForm__desc .mce-edit-area {
+  height: 180px;
+  overflow: auto;
+}
+
+#jgiveWrapper .launchForm__radio fieldset input {
+  margin: 6px 0 0 0;
+}
+
+#jgiveWrapper .launchForm__radio fieldset label {
+  margin: 0 20px;
+  padding-left: 0px;
+}
+
+#jgive_donors .js-stools-container-bar {
+  float: initial;
+}
+/*----Old Code----*/
+#jgiveWrapper .hide_jgdiv, .techjoomla-bootstrap .jgive_display_none {
+  display: none;
+}
+/*----Old Code End----*/
+/*---Gallery/Upload Image------*/
+#jgiveWrapper .hoverEffect .thumbnail div {
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+#jgiveWrapper .hoverEffect:hover .thumbnail div {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#jgiveWrapper .hoverEffect button, #jgiveWrapper .hoverEffect input {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  background-color: transparent;
+}
+
+#jgiveWrapper .hoverEffect:hover button, #jgiveWrapper .hoverEffect:hover input {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#jgiveWrapper .jg-image-gallery-inner {
+  height: auto !important;
+}
+
+#jgiveWrapper .media .modal {
+  position: initial;
+}
+
+#jgiveWrapper .campaign__filter--ht {
+  overflow-y: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+/*--(+)Selects all elements with class "switch__slider" that are placed immediately after input:checked element--*/
+#jgiveWrapper input:checked+.switch__slider {
+  background-color: #004595;
+}
+
+#jgiveWrapper input:checked+.switch__slider:before {
+  -ms-transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/*-----Uber Template----*/
+#jgiveWrapper .js-stools-container-bar .btn {
+  padding: 6px 10px;
+}
+
+#jgiveWrapper .chzn-container-single .chzn-single {
+  border-radius: 0;
+}
+/** v2.1.4 **/
+#jgiveWrapper .creatcamp__imgcover--height200 {
+  height: 200px !important;
+}
+
+#jgiveWrapper .creatcamp__imgcover--height200 .creatcamp__img {
+  height: inherit !important;
+}
+
+#jgiveWrapper .jgive_es_app_pin_item {
+  padding: 0px !important;
+}
+
+#jgiveWrapper .creatcamp--mb-0 {
+  margin-bottom: 0px !important;
+}
+
+#jgiveWrapper #other_city_check :not(#jgiveWrapper .tjBs5 #other_city_check) {
+  min-height: 34px;
+}
+
+#jgiveWrapper #report__coverimage {
+  margin: 0 auto;
+  height: 200px;
+}
+
+.tjBs3 #jgiveWrapper #myModal {
+  background-color: transparent;
+  width: initial;
+  margin-left: initial;
+}
+
+#jgiveWrapper #report__coverimage {
+  margin: 0 auto;
+  height: 200px;
+}
+
+#jgiveWrapper .report__link--nounderline {
+  text-decoration: none !important;
+}
+
+#jgiveWrapper .reports__content--wordwrap {
+  word-wrap: break-word;
+}
+
+#show_giveback_box {
+  display: none;
+}
+
+#contact_individual_msg {
+  display: none;
+  color: #43BFC7;
+}
+
+#contact_organization_msg {
+  display: none;
+  color: #43BFC7;
+}
+
+/*---media----*/
+@media (min-width: 768px) {
+  #jgiveWrapper .border-md-l {
+    border-left: 1px solid #ddd;
+  }
+
+  #jgiveWrapper .media_gallary_parent iframe, #jgiveWrapper .clone_media .thumbnail {
+    height: 153px;
+  }
+
+  .print-receipt {
+    margin: 0 10%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  #jgiveWrapper .clone_media .thumbnail {
+    max-height: 68px;
+  }
+
+  #jgiveWrapper .media_gallary_parent .span2 iframe {
+    max-height: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  #jgiveWrapper .campaign__launch {
+    text-align: center;
+    width: 40px;
+    cursor: pointer;
+    z-index: 99999;
+  }
+
+  #jgiveWrapper .campaign__launch i {
+    color: #fff;
+    line-height: 2;
+  }
+
+  #jgiveWrapper .campaign__search input[type=text] {
+    width: 175px;
+  }
+}
+
+@media (max-width: 576px) {
+  .launchForm__nav {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  #jgiveWrapper .ticketBookBtn {
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 999;
+    padding: 10px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  #jgiveWrapper .btn-donate-90 {
+    width: calc(100% - 40px);
+  }
+
+  #jgiveWrapper .campaign__filter {
+    border-left: 1px solid #ddd;
+    height: 100%;
+    overflow-y: scroll;
+    right: 0;
+    top: 0;
+    transition: right .5s;
+    transition-timing-function: ease-in-out;
+    width: calc(100% - 20%);
+    z-index: 99999;
+  }
+
+  #jgiveWrapper .todays-activity input {
+    font-size: 14px;
+  }
+
+  #jgiveWrapper .media_gallary_parent iframe {
+    max-height: 68px;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .only-in-print {
+    display: block !important;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .print-receipt h4, .print-receipt label {
+    font-size: 14px !important;
+  }
+
+  .col-sm-9 {
+    width: 75% !important;
+    float: left !important;
+  }
+
+  .col-sm-6 {
+    width: 50% !important;
+    float: left !important;
+  }
+
+  .col-sm-3 {
+    width: 25% !important;
+    float: left !important;
+  }
+
+  .col-sm-12 {
+    width: 100% !important;
+    float: left !important;
+  }
+
+  .print-receipt p {
+    width: 100% !important;
+  }
+
+  .print-receipt .panel-default {
+    border-color: #ddd !important;
+  }
+
+  .navbar, .header, .subhead-collapse {
+    display: none;
+  }
+
+  .row {
+    margin-right: -15px!important;
+    margin-left: -15px !important;
+  }
+
+  .print-text-left {
+    text-align: left !important;
+  }
+}
+
+/** v2.3.3 **/
+#jgiveWrapper #campaign-progress-bar{
+height: 20px ;
+}
+
+/** v2.3.4 **/
+#jgive_donors .js-stools-field-filter #filter_campaign_id_chzn{
+    width: 100%;
+}
+
+/** v2.3.5 **/
+.tjBs3 .terms input[type="checkbox"] {
+    vertical-align: top;
+    margin: 5px 0 0;
+}
+
+#jgiveWrapper .terms
+{
+  margin: 2px 0 0;
+}
+
+.checkout-heading a {
+  float: right;
+  font-weight: normal;
+  margin-top: 1px;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.isloading {
+  background-color: #eef2f6;
+  z-index: 5;
+  opacity: .6;
+  -webkit-transition: background-color .5s ease-out 1s;
+  -moz-transition: background-color .5s ease-out 1s;
+  -o-transition: background-color .5s ease-out 1s;
+  transition: background-color .5s ease-out 1s;
+  pointer-events: none
+}
+
+.isloading:before {
+  font-family: FontAwesome;
+  content: "\f110";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  font-size: 40px;
+  animation: fa-spin 2s infinite linear;
+  transform: translate(-50%, -50%);
+  text-align: center
+}
+
+.height-400
+{
+    height: 400px
+}
+
+.overflow-y-auto{
+    overflow-y: auto;
+}
+
+#jgive_all_donations .js-stools .btn-wrapper,
+#jgive_individuals .js-stools .btn-wrapper {
+    display: inline-flex;
+}
+
+#jgiveWrapper #jgive_all_donations .chzn-container,
+#jgiveWrapper #jgive_individuals .chzn-container {
+    min-width: 70px;
+}
+
+#jgiveWrapper #jgive_all_donations .icon-search:before,
+#jgiveWrapper #jgive_individuals .icon-search:before {
+    content: "\f002";
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+#jgiveWrapper .campaignSharingOptions hr,
+#jgiveWrapper .campaignSharingOptions ul {
+margin-left: 30%;
+margin-right: 30%;
+}
+
+#jgiveWrapper .campaignSharingOptions .campaignDetailPage{
+  font-weight:500;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid rgba(91, 192, 222, 0.75);
+  border-radius: 20px;
+}
+
+#jgiveWrapper .campaignSharingOptions .campaignLink{
+    width:auto;
+}
+
+#jgiveWrapper .campaignSharingOptions ul {
+  margin:0px;
+}
+
+#jgiveWrapper .campaignSharingOptions ul li i {
+ font-size:24px
+}
+
+#jgiveWrapper th {
+  white-space: inherit !important;
+}
+
+#jgiveWrapper.tjBs5 .text-black {
+  color: black !important;
+}
+
+#jgiveWrapper .ms-2 {
+  margin-left: 0.5rem !important;
+}
+
+#jgiveWrapper .position-absolute {
+  position: absolute !important;
+}
+
+#jgiveWrapper .position-relative {
+  position: relative !important;
+}
+
+.tjBs3 .modal.in {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tjBs5 #organizationform .chosen-container.chosen-container-single,
+.tjBs5 #organizationform .chosen-container.chosen-container-single .chosen-single,
+.tjBs5 #individualform .chosen-container.chosen-container-single,
+.tjBs5 #individualform .chosen-container.chosen-container-single .chosen-single,
+#jgiveWrapper .tjBs5 #jGivePaymentForm #billing-info-tab .chosen-container-single,
+#jgiveWrapper .tjBs5 #jGivePaymentForm #billing-info-tab .chosen-container-single .chosen-single {
+  width: 100% !important;
+}
+
+.img-90 {
+  width: 90% !important;
+}
+
+.jgive-dashboard.tjBs5 .fa-money:before, #jgiveWrapper.tjBs5 .fa-money:before {
+  content: "\f0d6" !important;
+}
+
+.jgive-dashboard.tjBs5 .fa-bar-chart-o:before, #jgiveWrapper.tjBs5 .fa-bar-chart-o:before {
+  content: "\f080" !important;
+}
+
+#jgiveWrapper .jgive_pin_item .campaign-title {  
+  display: -webkit-box;  
+  -webkit-line-clamp: 1; /* Adjust the number of lines to truncate */  
+  -webkit-box-orient: vertical;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+}
+
+.beneficiary-stories-card{
+  max-width: 450px;
+  overflow: hidden;
+}
+
+.beneficiary-stories-card .collapsed {
+	height: 300px
+}
+
+.beneficiary-stories-card .expanded {
+	height: auto;
+}
+
+#testimonialsCarousel .carousel-control-prev{
+  left: -20px;
+}
+
+#testimonialsCarousel .carousel-control-next{
+  right: -15px;
+}

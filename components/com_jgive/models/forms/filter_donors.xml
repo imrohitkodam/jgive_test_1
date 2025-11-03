@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search" type="text"
+			hint="COM_JGIVE_SEARCH_FILTER_SUBMIT"
+			label="COM_USERS_FILTER_SEARCH_DESC"
+			class="js-stools-search-string" />
+
+		<field
+			name="campaign_id"
+			type="mycampaigns"
+			class="form-select"
+			onchange="this.form.submit();"
+			multiple="false"
+		/>
+
+		<field name="donor_type" type="list" class="form-select" label="COM_JGIVE_DONATION_DONOR_TYPE" description="COM_JGIVE_DONATION_DONOR_TYPE_DESC"
+			onchange="this.form.submit();">
+			<option value="">COM_JGIVE_DONATION_DONOR_TYPE</option>
+			<option value="org">COM_JGIVE_DONATION_ORGANIZATION</option>
+			<option value="ind">COM_JGIVE_DONATION_INDIVIDUAL</option>
+		</field>
+	</fields>
+</form>

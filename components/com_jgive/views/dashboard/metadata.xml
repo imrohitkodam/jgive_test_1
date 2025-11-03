@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="COM_JGIVE_TITLE_DASHBOARD">
+		<message>
+			<![CDATA[COM_JGIVE_TITLE_DASHBOARD_DESC]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="COM_JGIVE_TITLE_DASHBOARD" msg="COM_JGIVE_TITLE_DASHBOARD_DESC" />
+		</options>
+	</view>
+</metadata>

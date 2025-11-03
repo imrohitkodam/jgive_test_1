@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="organizationform">
+		<message>
+			<![CDATA[
+				ORGANIZATION_FORM_VIEW
+			]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="COM_JGIVE_TITLE_CREATE_NEW_ORGANIZATION" msg="COM_JGIVE_TITLE_CREATE_NEW_ORGANIZATION_DESC" />
+		</options>
+	</view>
+</metadata>

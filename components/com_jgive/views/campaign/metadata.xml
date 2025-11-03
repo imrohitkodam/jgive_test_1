@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Campaign">
+		<message>
+			<![CDATA[
+				CAMPAIGN_DETAILS_VIEW
+			]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="COM_JGIVE_TITLE_SINGLE_CAMPAIGN" msg="COM_JGIVE_TITLE_SINGLE_CAMPAIGN_DESC" />
+		</options>
+	</view>
+</metadata>

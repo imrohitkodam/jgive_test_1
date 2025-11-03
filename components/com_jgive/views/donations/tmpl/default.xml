@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JGIVE_TITLE_MY_DONATIONS">
+		<message>
+			<![CDATA[COM_JGIVE_TITLE_MY_DONATIONS_DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>My Donations</name>
+		<description>My Donations</description>
+		<params>
+		</params>
+	</state>
+</metadata>

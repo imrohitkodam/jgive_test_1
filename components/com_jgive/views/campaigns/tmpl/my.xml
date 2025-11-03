@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JGIVE_TITLE_MY_CAMPAIGN">
+		<message>
+			<![CDATA[COM_JGIVE_TITLE_MY_CAMPAIGN_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="advaced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+
+			<field name="show_type_filter_my_camp" type="radio" description="COM_JGIVE_TYPE_MENU_MY_DESC" label="COM_JGIVE_TYPE_MENU" class="btn-group" default="1">
+				<option value="1">COM_JGIVE_YES</option>
+				<option value="0">COM_JGIVE_NO</option>
+			</field>
+			<field name="show_category_filter_my" type="radio" description="COM_JGIVE_CAT_MENU_MY_DESC" label="COM_JGIVE_CAT_MENU_MY" class="btn-group" default="1">
+				<option value="1">COM_JGIVE_YES</option>
+				<option value="0">COM_JGIVE_NO</option>
+			</field>
+			<field name="show_org_ind_type_filter_my" type="radio" description="COM_JGIVE_ORG_FILTER_MENU_MY_DESC" label="COM_JGIVE_ORG_FILTER_MENU_MY" class="btn-group" default="0">
+				<option value="1">COM_JGIVE_YES</option>
+				<option value="0">COM_JGIVE_NO</option>
+			</field>
+		</fieldset>
+	</fields>
+	<state>
+		<name>My Campaigns</name>
+		<description>My Campaigns</description>
+	</state>
+</metadata>

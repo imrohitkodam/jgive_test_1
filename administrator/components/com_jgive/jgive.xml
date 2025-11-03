@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="component" method="upgrade">
+	<name>COM_JGIVE</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<description><![CDATA[jGive - donations made easy]]></description>
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename>jgive.php</filename>
+		<filename>controller.php</filename>
+		<filename>helper.php</filename>
+		<filename>router.php</filename>
+		<folder>controllers</folder>
+		<folder>events</folder>
+		<folder>helpers</folder>
+		<folder>layouts</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>includes</folder>
+	</files>
+	<!-- Language frontend -->
+	<languages folder="languages-front">
+		<language tag="en-GB">en-GB/en-GB.com_jgive.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		</sql>
+	</install>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<media folder="media" destination="com_jgive">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>fields</folder>
+		<folder>images</folder>
+		<folder>javascript</folder>
+		<folder>vendors</folder>
+		<folder>themes</folder>
+		<folder>vendor_reports</folder>
+		<file>index.html</file>
+	</media>
+	<administration>
+		<menu link="option=com_jgive&amp;view=cp" img="../.../../media/com_jgive/images/icon-16-jgive.png">COM_JGIVE</menu>
+		<submenu>
+			<menu link="option=com_jgive&amp;view=cp&amp;layout=dashboard" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_DASHBOARD</menu>
+			<menu link="option=com_jgive&amp;view=campaigns" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_CAMPAIGNS</menu>
+			<menu link="option=com_categories&amp;view=categories&amp;extension=com_jgive" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_CATEGORIES</menu>
+			<menu link="option=com_jgive&amp;view=reports" img="../.../../media/com_jgive/images/icon-16-reports.png">COM_REPORTS</menu>
+			<menu link="option=com_tjvendors&amp;view=vendors&amp;client=com_jgive" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_VENDOR</menu>
+			<menu link="option=com_jgive&amp;view=donations" img="../.../../media/com_jgive/images/icon-16-donations.png">COM_DONATIONS</menu>
+			<menu link="option=com_jgive&amp;view=donors" img="../.../../media/com_jgive/images/icon-16-donations.png">COM_DONORS</menu>
+			<menu link="option=com_jgive&amp;view=individuals" img="../.../../media/com_jgive/images/icon-16-donations.png">COM_JGIVE_INDIVIDUALS_DONORS_MENU</menu>
+			<menu link="option=com_jgive&amp;view=organizations" img="../.../../media/com_jgive/images/icon-16-donations.png">COM_JGIVE_ORGANIZATIONS_DONORS_MENU</menu>
+			<menu link="option=com_jgive&amp;view=receipttemplate" img="../.../../media/com_jgive/images/icon-16-donations.png">COM_JGIVE_RECEIPT_TEMPLATE_MENU</menu>
+			<menu link="option=com_tjnotifications&amp;extension=com_jgive" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_TJNOTIFICATIONS_MENU</menu>
+			<menu link="option=com_tjreports&amp;view=tjreports&amp;client=com_jgive&amp;task=reports.defaultReport" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_TJREPORTS_MENU</menu>
+			<menu link="option=com_tjfields&amp;view=fields&amp;client=com_jgive.campaign" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_CAMPAIGN_FIELD</menu>
+			<menu link="option=com_tjfields&amp;view=groups&amp;client=com_jgive.campaign" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_JGIVE_CAMPAIGN_FIELDS_GROUP</menu>
+			<menu link="option=com_tjfields&amp;view=countries&amp;client=com_jgive" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_TITLE_COUNTRIES</menu>
+			<menu link="option=com_tjfields&amp;view=regions&amp;client=com_jgive" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_TITLE_REGIONS</menu>
+			<menu link="option=com_tjfields&amp;view=cities&amp;client=com_jgive" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_JGIVE_TITLE_CITIES</menu>
+			<menu link="option=com_fields&amp;context=com_jgive.individual" img="../.../../media/com_jgive/images/icon-16-campaigns.png">JGLOBAL_FIELDS</menu>
+			<menu link="option=com_fields&amp;view=groups&amp;context=com_jgive.individual" img="../.../../media/com_jgive/images/icon-16-campaigns.png">JGLOBAL_FIELD_GROUPS</menu>
+		</submenu>
+		<files folder="backend">
+			<filename>index.html</filename>
+			<filename>jgive.php</filename>
+			<filename>controller.php</filename>
+			<filename>helper.php</filename>
+			<filename>CHANGELOG.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>configuration.php</filename>
+			<filename>jgiveTemplate.json</filename>
+			<folder>controllers</folder>
+			<folder>help</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>houseKeeping</folder>
+			<folder>sql</folder>
+			<folder>template</folder>
+		</files>
+		<!-- Language backend -->
+		<languages folder="languages-admin">
+			<language tag="en-GB">en-GB/en-GB.com_jgive.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_jgive.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_jgive.menu.ini</language>
+		</languages>
+	</administration>
+	<scriptfile>script.jgive.php</scriptfile>
+	<!-- default component params values backend -->
+	<config>
+		<fields>
+			<fieldset>
+				<!--general_settings-->
+				<field name="integration" default="joomla" />
+				<field name="gravatar" default="0" />
+				<field name="silent_vendor" default="1" />
+				<field name="jomsocial_toolbar" default="0" />
+				<field name="profile_complete" default="0" />
+				<field name="profile_import" default="0" />
+				<field name="fieldmap" default="" />
+				<field name="default_country" default="1" />
+				<field name="camp_type" default="donation" type="list" />
+				<field name="admin_approval" default="0" />
+				<field name="enable_campaign_terms_conditions" default="0" />
+				<field name="terms_condition" default="0" />
+				<field name="camp_create_terms_article" default="0" />
+				<field name="payment_terms_article" default="0" />
+				<field name="show_selected_fields" default="0" />
+				<field name="creatorfield" default="" />
+				<field name="show_selected_fields_on_donation" default="0" />
+				<field name="donationfield" default="" />
+				<field name="load_bootstrap" default="0" />
+				<field name="date_format" default="j  M  Y" />
+				<field name="pin_width" default="230" />
+				<field name="pin_padding" default="10" />
+				<field name="bootstrap_version" default="bs3" />
+				<!-- Media settings -->
+				<field name="img_gallery" default="1" />
+				<field name="max_images" default="6" />
+				<field name="max_size" default="1024" />
+				<field name="small_width" default="128" />
+				<field name="small_height" default="128" />
+				<field name="medium_width" default="200" />
+				<field name="medium_height" default="150" />
+				<field name="large_width" default="400" />
+				<field name="large_height" default="300" />
+				<field name="video_gallery" default="0" />
+				<field name="allowedFileExtensions" default="flv,mp4,webm" />
+				<field name="max_video_file_size" default="10" />
+				<field name="max_videos" default="10" />
+				<field name="video_thumbnail_path" default="/media/com_jgive/thumbnails/" />
+				<field name="thumbnail_width" default="150" />
+				<field name="thumbnail_height" default="115" />
+				<field name="Video_upload" default="1" />
+				<field name="ffmpeg_path" default="" />
+				<field name="jgive_media_upload_path" default="media/com_jgive/campaigns" />
+				<field name="front_campaign_pin_view" default="media_m" />
+				<field name="front_campaign_detail_view" default="media" />
+				<field name="front_campaign_gallery_view" default="media_s" />
+				<field name="admin_campaign_detail_view" default="media_s" />
+				<field name="admin_campaign_gallery_view" default="media_s" />
+
+				<!--payment_settings-->
+				<field name="email" default="" />
+				<field name="currency" default="USD" />
+				<field name="currency_symbol" default="symbol"/>
+				<field name="currency_display_format" default="{CURRENCY_SYMBOL}{AMOUNT}" />
+				<field name="amount_separator" default="." />
+				<field name="send_payments_to_owner" default="0" />
+				<field name="fee_mode" default="inclusive" />
+				<field name="exclusive_fee_optional" default="0" />
+				<field name="commission_fee" default="0" />
+				<field name="fixed_commissionfee" default="0" />
+				<field name="admin_vat_reg_number" default="" />
+				<field name="vat_for_donor" default="0" />
+				<field name="recurring_donation" default="0" />
+				<field name="quick_donation" default="0" />
+				<field name="gateways" default="paypal" />
+				<field name="guest_donation" default="0" />
+				<field name="usergroup" default="0" />
+				<!--order_settings-->
+				<field name="order_prefix" default="JGOID" />
+				<field name="separator" default="-" />
+				<field name="random_orderid" default="0" />
+				<field name="padding_count" default="3" />
+				<!--Email_settings-->
+				<field name="mail_on_edit" default="0" />
+				<field name="goal_amount_reach" default="0" />
+				<field name="send_mail_new_order" default="1" />
+				<field name="mail_recipients_new_order" default="donor" />
+				<field name="send_mail_order_status_change" default="1" />
+				<field name="mail_recipients_order_status_change" default="donor" />
+				<!--Campaign_settings-->
+				<field name="campaign_activity" default="1" />
+				<field name="enable_reports" default="0" />
+				<field name="report_total_chars" default="200" />
+				<!--Social sharing settings-->
+				<field name="social_sharing" default="0" />
+				<field name="social_shring_type" default="addthis" />
+				<field name="addthis_publishid" default="" />
+				<field name="allow_vendor_to_share_campaign" default="0" />
+				<field name="social_sharing_options" default="" />
+				<!--Masspayment Payment -->
+				<field name="min_val_masspay" default="100" />
+				<field name="apiuser" default="" />
+				<field name="apipass" default="" />
+				<field name="apisign" default="" />
+				<field name="sandbox" default="0" />
+				<field name="apiv" default="87" />
+				<field name="private_key_cronjob" default="az197" />
+				<!--Not sure if used start-->
+				<field name="show_give_back" default="1" />
+				<field name="guest_reg_type" default="" />
+				<field name="category_id" type="category" default="" />
+				<!--menu options -->
+				<field name="show_sorting_options" default="1" />
+				<field name="default_sort_by_option" default="0" />
+				<field name="filter_order_Dir" default="asc" />
+				<field name="show_type_filter" default="1" />
+				<field name="show_category_filter" default="1" />
+				<field name="show_place_filter" default="0" />
+				<field name="show_search_filter" default="1" />
+				<!-- Report attachments settings -->
+				<field name="max_report_attachments" default="6" />
+				<field name="report_attachment_upload_path" default="media/com_jgive/campaigns/reports/attachments" />
+				<field name="allowed_report_attachments" default="doc,docx,pdf,ppt,pptx" />
+				<field name="max_report_attachment_size" default="6" />
+				<!--Not sure if used end-->
+			</fieldset>
+		</fields>
+	</config>
+</extension>

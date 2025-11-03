@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<!-- Campaign details -->
+		<field
+			name="id"
+			type="hidden"
+			default="0"
+			label="COM_JGIVE_CAMPAIGN_FORM_CAMPAIGN_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			filter="INT" />
+
+		<field
+			name="creator_id"
+			type="user"
+			default="0"
+			label="COM_JGIVE_CAMPAIGN_PROMOTER_LABEL_SELECT"
+			readonly=""
+			class=""
+			description="COM_JGIVE_CAMPAIGN_PROMOTER_LABEL"
+			filter="INT" />
+
+		<field
+			name="title"
+			type="text"
+			default=""
+			required="true"
+			label="COM_JGIVE_TITLE"
+			hint="COM_JGIVE_TITLE"
+			description="COM_JGIVE_TITLE_TOOLTIP"
+			filter="STRING"
+			maxlength="250"/>
+
+		<field
+			name="alias"
+			type="text"
+			default=""
+			label="COM_JGIVE_CAMPAIGN_ALIAS"
+			hint="COM_JGIVE_CAMPAIGN_ALIAS_HINT_TEXT"
+			description="COM_JGIVE_CAMPAIGN_ALIAS_TOOLTIP"
+			filter="CMD" />
+
+		<field
+			name="start_date"
+			type="calendar"
+			default="now"
+			required="true"
+			label="COM_JGIVE_START_DATE"
+			description="COM_JGIVE_START_DATE_TOOLTIP"
+			class="input-medium"
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M"
+			showtime="true"
+			timeformat="12"
+			todaybutton="true"
+			weeknumbers="true"
+			filltable="true" />
+
+		<field
+			name="end_date"
+			type="calendar"
+			required="true"
+			label="COM_JGIVE_END_DATE"
+			description="COM_JGIVE_END_DATE_TOOLTIP"
+			class="input-medium validate-enddateverify"
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M"
+			showtime="true"
+			timeformat="12"
+			todaybutton="true"
+			weeknumbers="true"
+			filltable="true"
+			onchange="jgiveCommon.validations.validationEndDate(this)"/>
+
+		<field
+			name="lifetimecamp"
+			type="radio"
+			default="0"
+			label="COM_JGIVE_TYPE"
+			description="COM_JGIVE_TYPE_TOOLTIP"
+			class="btn-group btn-group-yesno">
+			<option value="0">COM_JGIVE_NORMAL_CAMPAIGN</option>
+			<option value="1">COM_JGIVE_LIFETIME_CAMPAIGN</option>
+		</field>
+
+		<field
+			name="days_limit"
+			type="number"
+			required="true"
+			default=""
+			label="COM_JGIVE_PERIOD_IN_DAYS"
+			description="COM_JGIVE_PERIOD_IN_DAYS_PLACEHOLDER"
+			filter="INT"
+			min="1" />
+
+		<field
+			name="allow_view_donations"
+			type="radio"
+			default="1"
+			label="COM_JGIVE_SHOW_DONATIONS_TO"
+			description="COM_JGIVE_SHOW_DONATIONS_TO_TOOLTIP"
+			class="btn-group btn-group-yesno">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field
+			name="type"
+			type="radio"
+			default="donation"
+			label="COM_JGIVE_TYPE"
+			description="COM_JGIVE_TYPE_TOOLTIP"
+			class="btn-group-yesno"
+			maxlength="50">
+			<option value="donation">COM_JGIVE_CAMPAIGN_TYPE_DONATION</option>
+			<option value="investment">COM_JGIVE_CAMPAIGN_TYPE_INVESTMENT</option>
+		</field>
+
+		<field
+			name="org_ind_type"
+			type="list"
+			default="non_profit"
+			label="COM_JGIVE_TYPE_ORG_INDIVIDUALS"
+			description="COM_JGIVE_TYPE_ORG_INDIVIDUALS_TOOLTIP"
+			maxlength="250">
+			<option value="non_profit">COM_JGIVE_ORG_NON_PROFIT</option>
+			<option value="self_help">COM_JGIVE_SELF_HELP</option>
+			<option value="individuals">COM_JGIVE_SELF_INDIVIDUALS</option>
+		</field>
+
+		<field
+			name="category_id"
+			type="category"
+			extension="com_jgive"
+			default=""
+			required="true"
+			label="COM_JGIVE_CATEGORY"
+			description="COM_JGIVE_CATEGORY_TOOLTIP"
+			published="1"
+			filter="INT" />
+
+		<field
+			name="goal_amount"
+			type="amount"
+			required="true"
+			label="COM_JGIVE_GOAL_AMOUNT"
+			description="COM_JGIVE_GOAL_AMOUNT_TOOLTIP"
+			hint="COM_JGIVE_GOAL_AMOUNT_TOOLTIP" />
+
+		<field name="js_groupid" type="groupid"/>
+
+		<field
+			name="allow_exceed"
+			type="radio"
+			default="1"
+			label="COM_JGIVE_ALLOW_DONATIONS_EXCEED"
+			description="COM_JGIVE_ALLOW_DONATIONS_EXCEED_TOOLTIP"
+			class="btn-group btn-group-yesno">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field
+			name="minimum_amount"
+			required="true"
+			type="number"
+			default="0"
+			class="validate-minimumamount"
+			label="COM_JGIVE_MINIMUM_AMOUNT"
+			description="COM_JGIVE_MINIMUM_AMOUNT_TOOLTIP"
+			filter="INT" />
+
+		<field
+			name="max_donors"
+			required="true"
+			type="number"
+			default="0"
+			label="COM_JGIVE_MAX_DONORS"
+			description="COM_JGIVE_MAX_DONORS_TOOLTIP"
+			filter="INT" />
+
+		<field
+			name="published"
+			type="radio"
+			default="1"
+			label="COM_JGIVE_PUBLISH"
+			description="COM_JGIVE_PUBLISH_TOOLTIP"
+			class="btn-group btn-group-yesno">
+			<option value="1">COM_JGIVE_YES</option>
+			<option value="0">COM_JGIVE_NO</option>
+		</field>
+
+		<field
+			name="video_on_details_page"
+			type="checkbox"
+			default="0"
+			label="COM_JGIVE_CAMPAIGN_DEFAULT_VIDEO"
+			description=""
+			class="btn-group btn-group-yesno" >
+		</field>
+
+		<field
+			name="image"
+			type="file"
+			label="COM_JGIVE_CAMPAIGN_FORM_DISPLAY_IMAGE"
+			description="COM_JGIVE_CAMPAIGN_FORM_DISPLAY_IMAGE_DESC"
+			onchange="tjMediaFile.validateFile(this,0,0)"
+			menu_published="0"
+			upload_directory="media/com_jgive"
+			accept="image/jpeg,image/png,image/jpg,image/webp" />
+
+		<field
+			name="long_description"
+			type="editor"
+			label="COM_JGIVE_LONG_DESC"
+			description="COM_JGIVE_LONG_DESC_TOOLTIP"
+			rows="2"
+			cols="2"
+			filter="JComponentHelper::filterText" />
+
+		<field
+			name="meta_data"
+			type="textarea"
+			label="COM_JGIVE_META_DATA"
+			description="COM_JGIVE_META_DATA_TOOLTIP"
+			rows="8"
+			filter="" />
+
+		<field
+			name="meta_desc"
+			type="textarea"
+			label="COM_JGIVE_META_DESCRIPTION"
+			description="COM_JGIVE_META_DESCRIPTION_TOOLTIP"
+			rows="8"
+			filter="" />
+	</fieldset>
+
+	<field
+		name="givebacks"
+		description="COM_JGIVE_CAMPAIGN_FORM_GIVEBACKS_DESC"
+		type="subform"
+		label="COM_JGIVE_CAMPAIGN_FORM_GIVEBACKS"
+		min="0"
+		formsource="/components/com_jgive/models/forms/givebacks.xml"
+		multiple="true"
+		buttons="add,remove"
+		layout="JGive/GiveBacksSubform/layouts/subform/bs3/repeatable"
+		groupByFieldset="false" />
+
+	<field name="amount_suggestions" 
+		id="amount_suggestions_tags"
+		type="text" 
+		description="COM_JGIVE_CAMPAIGN_FORM_AMOUNT_SUGGESTIONS_DESC" 
+		label="COM_JGIVE_DONATION_AMOUNT_SUGGESTIONS"  
+		class="inputbox" hint="1000,2000.."
+		data-role="tagsinput"
+		multiple="true" />
+
+	<field
+		name="beneficiaryStories"
+		description="COM_JGIVE_CAMPAIGN_FORM_BENEFICIARY_STORIES_DESC"
+		type="subform"
+		label="COM_JGIVE_CAMPAIGN_FORM_BENEFICIARY_STORIES"
+		min=""
+		formsource= "/administrator/components/com_jgive/models/forms/beneficiary_stories.xml"
+		multiple="true"
+		buttons="add,remove"
+		layout="joomla.form.field.subform.repeatable"
+		groupByFieldset="false" />
+
+	<fieldset name="gallery" description= "Media  Gallery" label= "Media  Gallery">
+		<field name="id" type="hidden" />
+
+		<field
+			name="gallary_file_type"
+			type="list"
+			default="0"
+			label="JSELECT"
+			description="COM_JGIVE_GALLERY_DESC"
+			class="btn btn-group-yesno">
+				<option value="0">COM_JGIVE_GALLERY_FILE</option>
+				<option value="1">COM_JGIVE_GALLERY_LINK</option>
+		</field>
+
+		<field
+			name="gallery_file"
+			type="file"
+			label="COM_JGIVE_GALLERY_FILE"
+			description="COM_JGIVE_GALLERY_FILE_DESC"
+			onchange="tjMediaFile.validateFile(this,1,0)"
+			menu_published="0"
+			accept="image/jpeg,image/png,image/jpg,image/webp,video/mp4,video/webm" />
+
+		<field
+			name="gallery_link"
+			type="url"
+			label="COM_JGIVE_GALLERY_LINK"
+			description="COM_JGIVE_GALLERY_LINK_DESC"
+			class="inputbox"
+			default=""
+			validate="url"
+			scheme="https" />
+	</fieldset>
+</form>

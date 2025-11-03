@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+			class="subform_givebacks_id" />
+
+		<field
+			name="title"
+			type="text"
+			default=""
+			required="true"
+			class="subform_givebacks_title"
+			label="COM_JGIVE_GIVEBACK_TITLE"
+			hint="COM_JGIVE_GIVEBACK_TITLE"
+			description="COM_JGIVE_GIVEBACK_TITLE_TOOLTIP"
+			filter="STRING"
+			maxlength="250"/>
+
+		<field
+			name="amount"
+			type="number"
+			min="0"
+			default=""
+			required="true"
+			class="subform_givebacks_amount validate-giveawayAmount"
+			label="COM_JGIVE_GIVEBACK_VALUE"
+			description="COM_JGIVE_GIVE_BACK_VALUE_TOOLTIP"
+			filter="integer"
+			onchange="jgiveCommon.validations.validationGiveawayAmount(this)" />
+
+		<field
+			name="total_quantity"
+			type="number"
+			min="0"
+			default=""
+			required="true"
+			class="subform_givebacks_total_quantity"
+			label="COM_JGIVE_GIVEBACK_QUANTITY"
+			description="COM_JGIVE_GIVE_BACK_QUANTITY_TOOLTIP"
+			filter="integer" />
+
+		<field
+			name="description"
+			type="textarea"
+			default=""
+			class="subform_givebacks_description"
+			label="COM_JGIVE_GIVE_BACK_DETAILS"
+			description="COM_JGIVE_GIVE_BACK_DETAILS_TOOLTIP"
+			rows="5"
+			cols="70"
+			filter="safehtml" />
+
+		<field
+			name="giveback_image"
+			type="file"
+			label="COM_JGIVE_GIVEBACK_IMAGE"
+			class="subform_givebacks_giveback_image"
+			description="COM_JGIVE_GIVEBACK_IMAGE_DESC"
+			onchange="tjMediaFile.validateFile(this,0,0)"
+			menu_published="0"
+			upload_directory="media/com_jgive"
+			accept="image/jpeg,image/png,image/jpg,image/webp" />
+
+		<field
+			name="image"
+			type="imagedisplay"
+			default=""
+			label=""
+			description="" />
+	</fieldset>
+</form>
