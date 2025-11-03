@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>mod_jgive_campaigns_pin</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<description>MOD_JGIVE_PIN_CAMPAIGNS_DESC</description>
+	<files>
+		<filename module="mod_jgive_campaigns_pin">mod_jgive_campaigns_pin.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_jgive_campaigns_pin.ini</language>
+		<language tag="en-GB">en-GB.mod_jgive_campaigns_pin.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="mode" class="btn-group" type="radio" default="category" description="MOD_JGIVE_PIN_ENABLE_SINGLE_CAMPAIGN_TO_SHOW_DESC"
+				label="MOD_JGIVE_PIN_ENABLE_SINGLE_CAMPAIGN_TO_SHOW">
+					<option value="category">MOD_JGIVE_PIN_SHOW_CAMPAIGN_CATEGORY</option>
+					<option value="campaign">MOD_JGIVE_PIN_SHOW_SINGLE_CAMPAIGN</option>
+				</field>
+
+				<field name="select_single_campaign_to_show"
+					showon="mode:campaign"
+					type="sql"
+					label="MOD_JGIVE_PIN_SELECT_CAMPAIGN_TO_SHOW"
+					description="MOD_JGIVE_PIN_SELECT_CAMPAIGN_TO_SHOW_DESC"
+					sql_select="c.*"
+					sql_from="#__jg_campaigns AS c"
+					sql_order="c.id ASC"
+					sql_where="published = 1"
+					key_field="id"
+					value_field="title">
+					<option value="">MOD_JGIVE_PIN_SELECT_CAMPAIGN_TO_SHOW_DEFAULT_OPTION</option>
+				</field>
+
+				<field
+					name="campaign_cat"
+					showon="mode:category"
+					type="category"
+					extension="com_jgive"
+					published="1"
+					default="0"
+					label="MOD_JGIVE_CAMPAIGNS_PIN_SELECTED_CATEGORIES"
+					multiple="true"
+					description="MOD_JGIVE_CAMPAIGNS_PIN_SLECTED_CATEGORIES_DESC">
+					<option value="0">MOD_JGIVE_CAMPAIGNS_PIN_ALL</option>
+				</field>
+
+				<field name="campaigns_to_show" type="list" label="MOD_JGIVE_PIN_CAMPAIGNS_TO_SHOW" default="" showon="mode:category" description="MOD_JGIVE_PIN_CAMPAIGNS_TO_SHOW_DESC">
+					<option value="">MOD_JGIVE_PIN_ALL</option>
+					<option value="featured">MOD_JGIVE_PIN_FEATURED</option>
+					<option value="1">MOD_JGIVE_PIN_CAMPLETD</option>
+					<option value="0">MOD_JGIVE_PIN_ONGOING</option>
+					<option value="-1">MOD_JGIVE_PIN_FAILD</option>
+				</field>
+				<field name="no_of_camp_show" type="text" label="MOD_JGIVE_PIN_NO_OF_CAMPAIGNS_TO_SHOW" default="3" showon="mode:category" description="MOD_JGIVE_PIN_NO_OF_CAMPAIGNS_TO_SHOW_DESC" />
+
+				<field name="campaigns_sort_by" type="list" label="MOD_JGIVE_PIN_ORDER_BY" default="start_date" showon="mode:category" description="MOD_JGIVE_PIN_ORDER_BY_DESC">
+					<option value="start_date">MOD_JGIVE_PIN_DATE_CREATED</option>
+					<option value="end_date">MOD_JGIVE_PIN_DATE_END</option>
+					<option value="goal_amount">MOD_JGIVE_PIN_GOAL_AMOUNT</option>
+				</field>
+				<field name="order_dir" type="radio" class="btn-group" label="MOD_JGIVE_PIN_ORDER_BY_DIRECTION" showon="mode:category" default="ASC" description="MOD_JGIVE_PIN_ORDER_BY_DIRECTION_DESC" >
+					<option value="ASC">MOD_JGIVE_ASC</option>
+					<option value="DESC">MOD_JGIVE_DESC</option>
+				</field>
+
+				<field name="pin_width" type="text" default="240" label="MOD_JGIVE_PIN_WIDTH" description="MOD_JGIVE_PIN_WIDTH_DESC" />
+
+				<field name="pin_padding" type="text" default="10" label="MOD_JGIVE_PIN_PADDING" showon="mode:category" description="MOD_JGIVE_PIN_PADDING_DESC" />
+
+				<field name="moduleclass_sfx" type="text" label="MOD_JGIVE_MODULE_CLASS_SUFF" default="" description="MOD_JGIVE_MODULE_CLASS_SUFF_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

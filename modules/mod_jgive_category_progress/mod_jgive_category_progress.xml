@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="module" client="site" method="upgrade">
+	<name>mod_jgive_category_progress</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<description>MOD_JGIVE_CATEGORY_PROGRESS_DESC</description>
+	<files>
+		<filename module="mod_jgive_category_progress">mod_jgive_category_progress.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_jgive_category_progress.ini</language>
+		<language tag="en-GB">en-GB.mod_jgive_category_progress.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="campaign_cat"
+					type="category"
+					extension="com_jgive"
+					published="1"
+					default="0"
+					label="MOD_JGIVE_CATEGORY_PROGRESS_CATEGORY"
+					multiple="true"
+					description="MOD_JGIVE_CATEGORY_PROGRESS_CATEGORY_DESC">
+					<option value="0">MOD_JGIVE_CATEGORY_PROGRESS_ALL</option>
+				</field>
+
+				<field name="campaigns_to_show" type="list" default="" label="MOD_JGIVE_CATEGORY_PROGRESS_CAMPAIGN_STATUS" multiple="false" description="MOD_JGIVE_CATEGORY_PROGRESS_CAMPAIGN_STATUS_DESC">
+					<option value ="">MOD_JGIVE_CATEGORY_PROGRESS_ALL</option>
+					<option value="0">MOD_JGIVE_CATEGORY_PROGRESS_ONGOING</option>
+					<option value="featured">MOD_JGIVE_CATEGORY_PROGRESS_FEATURED</option>
+					<option value="1">MOD_JGIVE_CATEGORY_PROGRESS_COMPLETED</option>
+					<option value="-1">MOD_JGIVE_CATEGORY_PROGRESS_FAILED</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="privacy" method="upgrade">
+	<name>PLG_PRIVACY_JGIVE</name>
+	<version>4.1.1</version>
+	<creationDate>18th Aug 2025</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_PRIVACY_JGIVE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jgive">jgive.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_jgive.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_jgive.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" />
+		</fields>
+	</config>
+</extension>

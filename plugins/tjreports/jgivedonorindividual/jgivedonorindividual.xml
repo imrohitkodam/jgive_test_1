@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.1" type="plugin" group="tjreports" method="upgrade">
+	<name>plg_tjreports_jgivedonorindividual</name>
+	<author>Techjoomla</author>
+	<creationDate>28th Jan 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>2.4.0</version>
+	<description>PLG_TJREPORTS_JGIVEDONORINDIVIDUAL_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jgivedonorindividual">jgivedonorindividual.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjreports_jgivedonorindividual.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjreports_jgivedonorindividual.sys.ini</language>
+	</languages>
+</extension>

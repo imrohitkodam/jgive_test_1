@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>mod_jgive_campaigns</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<description>MOD_JGIVE_CAMPAIGNS_DESC</description>
+	<files>
+		<filename module="mod_jgive_campaigns">mod_jgive_campaigns.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+	</files>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_jgive_campaigns.ini</language>
+		<language tag="en-GB">en-GB.mod_jgive_campaigns.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="module_for" type="list" label="MOD_JGIVE_TYPE" default="all_camp" description="MOD_JGIVE_TYPE_DESC" >
+					<option value="all_camp">MOD_JGIVE_ALL_CAMPAIGNS</option>
+					<option value="js_group_camp">MOD_JGIVE_JS_CAMPAIGNS</option>
+				</field>
+
+				<field name="campaigns_sort_by" type="list" label="MOD_JGIVE_ORDER_BY" default="start_date" description="MOD_JGIVE_ORDER_BY_DESC">
+					<option value="start_date">MOD_JGIVE_DATE_CREATED</option>
+					<option value="goal_amount">MOD_JGIVE_GOAL_AMOUNT</option>
+					<option value="amount_received">MOD_JGIVE_AMOUNT_RECIEVED</option>
+					<option value="remaining_amount">MOD_JGIVE_AMOUNT_REMANING</option>
+				</field>
+
+				<field name="order_dir" type="radio" class="btn-group" label="MOD_JGIVE_ORDER_BY_DIRECTION" default="desc" description="MOD_JGIVE_ORDER_BY_DIRECTION_DESC" >
+					<option value="asc">MOD_JGIVE_ASC</option>
+					<option value="desc">MOD_JGIVE_DESC</option>
+				</field>
+				<field name="no_of_camp_show" type="text" label="MOD_JGIVE_NO_OF_CAMPAIGNS_TO_SHOW" default="5" description="MOD_JGIVE_NO_OF_CAMPAIGNS_TO_SHOW_DESC" />
+				<field name="image" type="radio" class="btn-group" label="MOD_JGIVE_SHOW_CAMPAIGNS_IMG" default="1" description="MOD_JGIVE_SHOW_CAMPAIGNS_IMG_DESC">
+					<option value="1">MOD_JGIVE_YES</option>
+					<option value="0">MOD_JGIVE_NO</option>
+				</field>
+				<field name="featured_camp" type="radio"  class="btn-group" label="MOD_JGIVE_FEATURED_ONLY" default="0" description="MOD_JGIVE_FEATURED_DESC">
+					<option value="1">MOD_JGIVE_YES</option>
+					<option value="0">MOD_JGIVE_NO</option>
+				</field>
+
+				<field name="show_goal_remaining" type="radio" class="btn-group" label="MOD_JGIVE_EXTRA_FIELDS_SHOW" default="0" description="MOD_JGIVE_EXTRA_FIELDS_SHOW_DESC" >
+					<option value="1">MOD_JGIVE_YES</option>
+					<option value="0">MOD_JGIVE_NO</option>
+				</field>
+				<field name="show_received" type="radio" class="btn-group" label="MOD_JGIVE_RECIEVED_SHOW" default="0" description="MOD_JGIVE_RECIEVED_SHOW_DESC" >
+					<option value="1">MOD_JGIVE_YES</option>
+					<option value="0">MOD_JGIVE_NO</option>
+				</field>
+				<field name="show_related_campaigns" type="radio" class="btn-group" label="MOD_JGIVE_SHOW_RELATED_CAMPAIGNS" description="MOD_JGIVE_SHOW_RELATED_CAMPAIGNS_DESC" default="0">
+    				<option value="1">MOD_JGIVE_YES</option>
+    				<option value="0">MOD_JGIVE_NO</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" label="MOD_JGIVE_MODULE_CLASS_SUFF" default="0" description="MOD_JGIVE_MODULE_CLASS_SUFF_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

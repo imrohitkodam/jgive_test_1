@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+    <name>plg_content_jlike_jgive</name>
+	<author>Techjoomla</author>
+        <copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+        <description>PLG_CONTENT_JLIKE_JGIVE_XML_DESCRIPTION</description>
+        <files>
+		<filename plugin="jlike_jgive">jlike_jgive.php</filename>
+    	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_jlike_jgive.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_jlike_jgive.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="jlike_comments" type="radio" class="btn-group" label="PLG_JLIKE_ALLOW_COMMENT" default="1" description="PLG_JLIKE_ALLOW_COMMENT_DESC">
+					<option value="1">PLG_JLIKE_YES</option>
+					<option value="0">PLG_JLIKE_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

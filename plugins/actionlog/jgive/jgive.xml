@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="actionlog" method="upgrade">
+	<name>PLG_ACTIONLOG_JGIVE</name>
+	<author>Techjoomla</author>
+	<creationDate>18th Aug 2025</creationDate>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.1.1</version>
+	<description>PLG_ACTIONLOG_JGIVE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jgive">jgive.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jgive.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jgive.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="logActionForCampaignSave" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_CAMPAIGN_SAVE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForCampaignDelete" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_CAMPAIGN_DELETE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForCampaignStateChange" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_CAMPAIGN_STATE_CHANGE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForReportSave" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_REPORT_SAVE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForReportDelete" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_REPORT_DELETE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForPaymentStatusProcess" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_PAYMENT_STATUS_PROCESS" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForPaymentSuccess" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_PAYMENT_SUCEESS" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForPaymentStatusChange" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_PAYMENTS_STATUS_CHANGE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForDonationDeleted" type="radio" label="PLG_ACTIONLOG_JGIVE_LOG_ACTION_DONATION_DELETE" description="PLG_ACTIONLOG_JGIVE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

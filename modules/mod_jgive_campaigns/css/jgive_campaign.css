@@ -1,0 +1,106 @@
+.noborder th,.noborder td{
+	border:0px!important;
+}
+.com_jgive_progress_text{
+	font-size:9px;
+	color:#000000;
+}
+.td_amt{
+	width:50%;
+	font-size:9px;
+	text-align: right!important;
+}
+.td_amt_right{
+	width:50%;
+	font-size:9px;
+	text-align: right!important;
+}
+#button-div{
+	width:90%;
+}
+#prgressbar-div{
+	width:65%;
+	float:right;
+}
+#containerdiv{
+	width:100%;
+}
+#image-div{
+	width:30%;
+	float:left;
+}
+.amount_lable{
+	text-align:right !important;
+	float:left;
+}
+.amount_data{
+	text-align:right !important;
+	width:50%;
+	float:right;
+}
+.div_padding{
+	padding:8px;
+}
+.div_show_amount{
+	font-size:
+	10px;width:69%;
+	float:right;
+}
+.show_amount_on{
+	margin-top:10%;
+}
+.show_amount_off{
+	margin-left:50%;
+	margin-top:-10%;
+}
+
+
+.mod_campaign_rubber_stamp_text
+{
+  border: 2px solid rgb(98, 196, 98);
+  padding: 7px;
+  border-radius: 9px;
+}
+
+.mod_rubber_stamp {
+ font-size: 34px;
+ line-height: 26px;
+ text-transform: uppercase;
+ font-weight: bold;
+ color: rgb(98, 196, 98);
+ float: left;
+ opacity: 0.6;
+ -webkit-transform: rotate(-10deg);
+ -o-transform: rotate(-10deg);
+ -moz-transform: rotate(-10deg);
+ -ms-transform: rotate(-10deg);
+ position: relative;
+ top: 44%;
+ text-align:center;
+ width: 100%;
+}
+.mod_rubber_stamp::after {
+  position: relative;
+  content: " ";
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  top: -10px;
+  left: -10px;
+  padding: 10px;
+  background: url(https://raw.github.com/domenicosolazzo/css3/master/img/noise.png) repeat;
+}
+.mod_camp .progress{
+	height: 8px;
+}
+.jgive_module_campaign:hover{
+	border: 1px solid darkblue;
+}
+
+@media (min-width: 480px){
+	.jgive_module_campaign { width: 320px !important; margin-right: 5px !important; padding-top: 2px !important;}
+}
+
+.jgive-mt-1 {
+	margin-top: 1% !important;
+}

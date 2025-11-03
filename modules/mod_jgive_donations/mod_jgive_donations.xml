@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>mod_jgive_donations</name>
+	<author>Techjoomla</author>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<description>MOD_JGIVE_DONATION_DESC</description>
+
+	<files>
+		<filename module="mod_jgive_donations">mod_jgive_donations.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_jgive_donations.ini</language>
+		<language tag="en-GB">en-GB.mod_jgive_donations.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="module_for" type="radio" label="MOD_JGIVE_DONATION_MODULE" default="my_donations" description="MOD_JGIVE_DONATION_MODULE_DESC">
+					<option value="my_donations">MOD_JGIVE_DONATION_MY_DONATIONS</option>
+					<option value="last_donations">MOD_JGIVE_DONATION_LAST_DONATIONS</option>
+					<option value="top_donations">MOD_JGIVE_DONATION_TOP_DONATIONS</option>
+				</field>
+				<field name="no_of_record_show" type="text" label="MOD_JGIVE_NO_OF_RECORDS_TO_SHOW" default="5" description="MOD_JGIVE_NO_OF_RECORDS_TO_SHOW_DESC" />
+				<field name="moduleclass_sfx" type="text" label="MOD_JGIVE_MODULE_CLASS_SUFF" default="" description="MOD_JGIVE_MODULE_CLASS_SUFF_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>plg_system_jgiveactivities</name>
+	<author>Techjoomla</author>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<description>PLG_JGIVE_ACTIVITY_DESC</description>
+	<files>
+		<filename plugin="jgiveactivities">jgiveactivities.php</filename>
+		<filename>helper.php</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_system_jgiveactivities.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_system_jgiveactivities.ini</language>
+	</languages>
+</extension>

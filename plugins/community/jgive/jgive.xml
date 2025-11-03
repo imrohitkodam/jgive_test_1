@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5"  type="plugin" group="community" method="upgrade">
+	<name>plg_community_jgive</name>
+	<author>Techjoomla</author>
+	<copyright>Copyright (C) 2012 - 2025 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>18th Aug 2025</creationDate>
+	<version>4.1.1</version>
+	<isapplication>true</isapplication>
+	<!--<isbrowseable>true</isbrowseable>-->
+	<description>PLG_JGIVE_XML_DESCRIPTION</description>
+
+	<languages folder="language/en-GB">
+        <language tag="en-GB">en-GB.plg_community_jgive.ini</language>
+        <language tag="en-GB">en-GB.plg_community_jgive.sys.ini</language>
+    </languages>
+
+	<files>
+		<filename plugin="jgive">jgive.php</filename>
+	</files>
+
+
+	<menuitem>
+		<menu label="Profile" position="toolbar">
+			<link label="Profile">task=profile</link>
+		</menu>
+	</menuitem>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="count" type="text" default="3" label="PLG_JGIVE_COUNT_LBL" description="PLG_JGIVE_COUNT_DESC" />
+				<field name="pin_width" type="text" default="400" label="PLG_JGIVE_PIN_WIDTH_LBL" description="PLG_JGIVE_PIN_WIDTH_DESC" />
+				<field name="cache" type="list" default="0" label="PLG_JGIVE_CACHING_LBL" description="PLG_JGIVE_CACHING_DESC">
+					<option value="0">PLG_JGIVE_NO</option>
+					<option value="1">PLG_JGIVE_YES</option>
+				</field>
+				<field name="coreapp" type="list" default="1" label="PLG_JGIVE_CORE_LBL" description="PLG_JGIVE_CORE_DESC">
+					<option value="0">PLG_JGIVE_NO</option>
+					<option value="1">PLG_JGIVE_YES</option>
+				</field>
+				<field name="position" type="list" default="sidebar-top" label="PLG_JGIVE_POSITION_LBL" description="PLG_JGIVE_POSITION_LBL">
+					<option value="content">Main content</option>
+					<option value="sidebar-top">Sidebar top</option>
+					<option value="sidebar-bottom">Sidebar bottom</option>
+				</field>
+				<field name="goal_remain_amount" type="list" default="1" label="PLG_JGIVE_GOAL_REMAIN_AMT_LBL" description="PLG_JGIVE_GOAL_REMAIN_AMT_DESC">
+					<option value="0">PLG_JGIVE_NO</option>
+					<option value="1">PLG_JGIVE_YES</option>
+				</field>
+				<field name="receivedamount" type="list" default="0" label="PLG_JGIVE_RECEIVED_AMT_LBL" description="PLG_JGIVE_RECEIVED_AMT_DESC">
+					<option value="0">PLG_JGIVE_NO</option>
+					<option value="1">PLG_JGIVE_YES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2025 PlgSetu. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="plugin" version="3.0" group="panverification" method="upgrade">
+	<name>Pan verification - SETU</name>
+	<author></author>
+	<creationDate>January 2025</creationDate>
+	<copyright>Copyright (c) 2025 PlgSetu. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+		Plugin to verify PAN number using SETU as a service provider
+	]]>
+	</description>
+
+	<files>
+		<folder>setu</folder>
+		<filename plugin="setu">setu.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_panverification_setu.ini</language>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_panverification_setu.sys.ini</language>
+	</languages>
+
+	<params>
+  		<param name="sandbox-base-url" type="text" default="https://dg-sandbox.setu.co/api/verify/pan" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_BASE_URL" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_BASE_URL_DESC"/>
+  		<param name="prod-base-url" type="text" default="https://dg.setu.co/api/verify/pan" label="PLG_PAN_VERIFICATION_SETU_PRODUCTION_BASE_URL" description="PLG_PAN_VERIFICATION_SETU_PRODUCTION_BASE_URL_DESC"/>
+
+  		<param type="spacer" />
+		<param name="sandbox" type="radio" default="0" label="PLG_PAN_VERIFICATION_SETU_VERIFICATION_MODE" description="PLG_PAN_VERIFICATION_SETU_VERIFICATION_MODE_DESC">
+		  <option value="0">NO</option>
+		  <option value="1">YES</option>
+		</param>
+
+  		<param name="sandbox-x-client-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_ID" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_ID_DESC"/>
+  		<param name="sandbox-x-client-secret" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_SECRET" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_SECRET_DESC"/>
+  		<param name="sandbox-x-product-instance-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_PRODUCT_INSTANCE_ID" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_PRODUCT_INSTANCE_ID_DESC"/>
+
+		<param name="prod-x-client-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_ID" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_ID_DESC"/>
+  		<param name="prod-x-client-secret" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_SECRET" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_SECRET_DESC"/>
+  		<param name="prod-x-product-instance-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_PRODUCT_INSTANCE_ID" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_PRODUCT_INSTANCE_ID_DESC"/>
+
+	</params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="sandbox" type="radio" default="0" label="SANDBOX" description="SANDBOX_DESC">
+					<option value="0">NO</option>
+					<option value="1">YES</option>
+				</field>
+				<field name="sandbox-base-url" type="text" default="https://dg-sandbox.setu.co/api/verify/pan" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_BASE_URL" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_BASE_URL_DESC" readonly="true"/>
+				<field name="sandbox-x-client-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_ID" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_ID_DESC" />
+				<field name="sandbox-x-client-secret" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_SECRET" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_CLIENT_SECRET_DESC" />
+				<field name="sandbox-x-product-instance-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_SANDBOX_PRODUCT_INSTANCE_ID" description="PLG_PAN_VERIFICATION_SETU_SANDBOX_PRODUCT_INSTANCE_ID_DESC" />
+				
+				<field name="prod-base-url" type="text" default="https://dg.setu.co/api/verify/pan" label="PLG_PAN_VERIFICATION_SETU_PRODUCTION_BASE_URL" description="PLG_PAN_VERIFICATION_SETU_PRODUCTION_BASE_URL_DESC" readonly="true"/>
+				<field name="prod-x-client-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_PRODUCTION_CLIENT_ID" description="PLG_PAN_VERIFICATION_SETU_PRODUCTION_CLIENT_ID_DESC" />
+				<field name="prod-x-client-secret" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_PRODUCTION_CLIENT_SECRET" description="PLG_PAN_VERIFICATION_SETU_PRODUCTION_CLIENT_SECRET_DESC" />
+				<field name="prod-x-product-instance-id" type="text" default="" label="PLG_PAN_VERIFICATION_SETU_PRODUCTION_PRODUCT_INSTANCE_ID" description="PLG_PAN_VERIFICATION_SETU_PRODUCTION_PRODUCT_INSTANCE_ID_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+	
+</extension>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="api" method="upgrade">
+	<name>plg_api_jgive</name>
+	<version>1.0.0</version>
+	<creationDate>17th Jan 2020</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_API_JGIVE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jgive">jgive.php</filename>
+		<folder>jgive</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_api_jgive.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_api_jgive.sys.ini</language>
+	</languages>
+</extension>
